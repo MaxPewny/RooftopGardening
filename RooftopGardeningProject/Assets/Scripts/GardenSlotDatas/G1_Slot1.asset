@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c07bdcecdbfc745b079a90e07f11aa, type: 3}
-  m_Name: CurrencyData
+  m_Script: {fileID: 11500000, guid: 8beafadebf244e047976a345059eff19, type: 3}
+  m_Name: G1_Slot1
   m_EditorClassIdentifier: 
-  SoftCurrency: 0
-  HardCurrency: 0
+  Plant: {fileID: 0}

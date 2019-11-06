@@ -5,55 +5,39 @@ using UnityEngine.EventSystems;
 
 public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
 {
+    public GameObject MovingCanvas;
+    private Transform originalParent;
+
+    public LayerMask RaycastLayerMask = 1;
+
+    void Start()
+    {
+        originalParent = transform.parent;
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
-#if UNITY_ANDROID
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
-        {
-            transform.position = Input.GetTouch(0).position;
-        }
-#elif UNITY_IOS
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
-        {
-            transform.position = Input.GetTouch(0).position;
-        }
-#else
-        transform.position = Input.mousePosition;
-#endif
+        transform.SetParent(MovingCanvas.transform, true);
+        transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
         RaycastHit hitInfo;
 
-#if UNITY_ANDROID
-        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-#elif UNITY_IOS
-        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-#else
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-#endif
+            Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
-        if (Physics.Raycast(ray, out hitInfo, 1000))
-        {
-            if (hitInfo.transform.tag == "Plant")
+            if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
             {
-                Debug.Log("Watering Plant");
+                Debug.Log(hitInfo.transform.name);
+                if (hitInfo.transform.tag == "Plant")
+                {
+                    Debug.Log("Watering Plant");
+                    //hitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
+                }
             }
-            transform.localPosition = Vector3.zero;
-        }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        transform.SetParent(originalParent);
+        transform.gameObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        transform.gameObject.GetComponent<RectTransform>().offsetMin = Vector2.zero;
     }
 }

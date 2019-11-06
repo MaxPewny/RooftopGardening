@@ -30,3 +30,13 @@ public enum WaterLevel
     WATERED,
     OVERWATERED,
 }
+
+public enum Slot 
+{
+    FIRST,
+    SECOND,
+    THIRD,
+    FOURTH,
+    FIFTH,
+    SIXTH
+}
