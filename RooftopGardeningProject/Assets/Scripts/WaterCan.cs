@@ -24,7 +24,6 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         RaycastHit hitInfo;
-
             Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
             if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))

@@ -5,25 +5,29 @@ using UnityEngine.EventSystems;
 
 public class GardenSlot : MonoBehaviour, IPointerClickHandler
 {
-    public GardenSlotData Data;
 
+    public int SlotNumber;
     private Garden currentGarden;
 
     public GameObject Plant;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         currentGarden = GetComponentInParent<Garden>();
-        if (Data.Plant != null)
+        if (GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].SlotUsed == true)
         {
-            Plant = Instantiate(currentGarden.PlantPrefab);
-            Plant.GetComponent<Plant>().LoadFromData(Data.Plant);
+            Plant = Instantiate(currentGarden.PlantPrefab, transform);
+            Plant.GetComponent<Plant>().LoadFromData(GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber]);
         }
+
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-       
+        //throw new System.NotImplementedException();
     }
 }
+
+

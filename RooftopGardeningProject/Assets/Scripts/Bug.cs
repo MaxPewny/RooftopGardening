@@ -11,12 +11,17 @@ public class Bug : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         removeTapCount = RemoveTapAmount;
+        gameObject.SetActive(false);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("click");
         removeTapCount--;
-        if (removeTapCount <= 0) Destroy(this.gameObject);
+        if (removeTapCount <= 0) 
+        {
+            transform.GetComponentInParent<Plant>().BugRemoved();
+            Destroy(this.gameObject); 
+        }
     }
 }

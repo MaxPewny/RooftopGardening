@@ -1,9 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlantCurrency : MonoBehaviour
+﻿public class PlantCurrency
 {
-    public int Seeds;
-    public int Fruits;
+    public PlantType Plant;
+    public uint Fruit;
+    public uint Seed;
+
+    public PlantCurrency(PlantType GivenType) 
+    {
+        Plant = GivenType;
+        Fruit = 0;
+        Seed = 0;
+    }
 }

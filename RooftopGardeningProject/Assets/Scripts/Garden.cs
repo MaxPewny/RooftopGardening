@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Garden : MonoBehaviour
 {
+    public int GardenNumber;
+
     public GameObject PlantPrefab;
 
     public GameObject EmptySlotPrefab;
@@ -14,9 +16,8 @@ public class Garden : MonoBehaviour
 
     private void Start()
     {
-
     }
-
+    
     public void OpenPlantMenu(GardenSlot SelectedSlot) 
     {
         Instantiate(PlantMenuPrefab, UsedCanvas.transform);

@@ -40,3 +40,9 @@ public enum Slot
     FIFTH,
     SIXTH
 }
+
+public enum PlantType 
+{
+    TOMATO,
+    CABBAGE
+}
