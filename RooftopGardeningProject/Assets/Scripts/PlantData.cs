@@ -14,7 +14,7 @@ public class PlantData
     public CareState PlantCareState;
     public WaterLevel PlantWaterLevel;
 
-    public int BugApperanceTime = 1;
+    //public int BugApperanceTime = 1;
 
     public int MaxFruitCounter;
     public int FruitsCounter;
@@ -23,8 +23,8 @@ public class PlantData
 
     //public int MaxBugCounter;
     //public int BugCounter;
-
-    public int GrowCycleTime;
+    
+    public float GrowCycleTime;
 
     public string NextGrowthDate = "01.01.2000 12:00:00 ";
     public string NextWaterDate = "01.01.2000 12:00:00 ";

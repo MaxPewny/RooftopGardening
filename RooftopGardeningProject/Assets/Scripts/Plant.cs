@@ -15,9 +15,9 @@ public class Plant : MonoBehaviour
     public GameObject Bug;
     public List<GameObject> Fruits = new List<GameObject>();
 
-    public int BugApperanceTime = 1; // TODO: move to Scriptable Object?
-    public int GrowCycleTime = 1;
-    public int WaterCycleTime = 1;
+    public float BugApperanceTime = 1; // TODO: move to Scriptable Object?
+    public float GrowCycleTime = 1;
+    public float WaterCycleTime = 1;
 
     public bool BugIsThere = false;
 
@@ -44,6 +44,33 @@ public class Plant : MonoBehaviour
         ChangeSprite(Data.PlantLevel);
         GrowFruit(Data.FruitsCounter);
         BugAppearance(Data.BugIsThere);
+    }
+
+    public void SetData(PlantPreset Preset, PlantData Data) 
+    {
+        GardenNumber = Data.GardenNumber;
+        PlantNumber = Data.SlotNumber;
+
+        Level1Sprite = Preset.Level1Sprite;
+        Level2Sprite = Preset.Level2Sprite;
+        Level3Sprite = Preset.Level3Sprite;
+
+        BugApperanceTime = Preset.BugApperanceTime;
+        GrowCycleTime = Preset.GrowCycleTime;
+        WaterCycleTime = Preset.WaterCycleTime;
+
+        Data.PlantLevel = Level.LEVEL_1;
+        Data.FruitsCounter = 0;
+        Data.Type = Preset.Type;
+        Data.GrowCycleTime = Preset.GrowCycleTime;
+        Data.MaxFruitCounter = Preset.MaxFruitCounter;
+        Data.NextBugDate = Preset.StartBugDate;
+        Data.NextGrowthDate = Preset.StartGrowthDate;
+        Data.NextWaterDate = Preset.StartWaterDate;
+
+        Data.SlotUsed = true;
+
+        ChangeSprite(Data.PlantLevel);
     }
 
     public void ChangeSprite(Level PlantLevel) 

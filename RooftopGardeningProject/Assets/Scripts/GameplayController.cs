@@ -31,6 +31,8 @@ public class GameplayController : Singleton<GameplayController>
             for (int j = 0; j < PlantsPerSpotCount; j++)
             {
                 PlantDatas[i].Add(new PlantData());
+                PlantDatas[i][j].GardenNumber = i;
+                PlantDatas[i][j].FruitsCounter = j;
             }
         }
 
@@ -91,7 +93,7 @@ public class GameplayController : Singleton<GameplayController>
         }
     }
 
-    public void WaterPlant(int GardenNr, int PlantNr, int WaterCycleTime)
+    public void WaterPlant(int GardenNr, int PlantNr, float WaterCycleTime)
     {
         for (int i = 0; i < PlantDatas.Count; i++)
         {
@@ -106,7 +108,7 @@ public class GameplayController : Singleton<GameplayController>
         }
     }
 
-    public void BugRemoved(int GardenNr, int PlantNr, int BugApperanceTime)
+    public void BugRemoved(int GardenNr, int PlantNr, float BugApperanceTime)
     {
         for (int i = 0; i < PlantDatas.Count; i++)
         {

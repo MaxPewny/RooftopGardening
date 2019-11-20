@@ -9,6 +9,7 @@ public class GardenSlot : MonoBehaviour, IPointerClickHandler
     public int SlotNumber;
     private Garden currentGarden;
 
+    public List<ScriptableObject> PlantPresets;
     public GameObject Plant;
 
     // Start is called before the first frame update
@@ -20,8 +21,22 @@ public class GardenSlot : MonoBehaviour, IPointerClickHandler
             Plant = Instantiate(currentGarden.PlantPrefab, transform);
             Plant.GetComponent<Plant>().LoadFromData(GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber]);
         }
+    }
 
-
+    public void PlantSeed(PlantType SelectedType) 
+    {
+        if (GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].SlotUsed == false)
+        {
+            Plant = Instantiate(currentGarden.PlantPrefab, transform);
+            foreach (PlantPreset preset in PlantPresets)
+            {
+                if (preset.Type == SelectedType)
+                {
+                    Plant.GetComponent<Plant>().SetData(preset, GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber]);
+                    break;
+                }
+            }
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)

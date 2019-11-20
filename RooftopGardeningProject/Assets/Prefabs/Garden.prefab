@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 549513874}
   - component: {fileID: 549513873}
   m_Layer: 0
-  m_Name: GardenSlot
+  m_Name: GardenSlot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b935ea51b752a419988e7448871543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 0}
-  currentGarden: {fileID: 0}
-  PlantPrefab: {fileID: 0}
-  EmptySlotPrefab: {fileID: 0}
+  SlotNumber: 0
+  PlantPresets:
+  - {fileID: 11400000, guid: 76ee051d1c4f7b7489a4bf3e52034b8d, type: 2}
+  - {fileID: 11400000, guid: aa30264deb9b0984b8fa9111ab58ef79, type: 2}
   Plant: {fileID: 0}
 --- !u!61 &549513873
 BoxCollider2D:
@@ -119,5 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dd4b12ba05f594dbd07218118e893a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GardenNumber: 0
   PlantPrefab: {fileID: 0}
   EmptySlotPrefab: {fileID: 0}
+  PlantMenuPrefab: {fileID: 0}
+  UsedCanvas: {fileID: 0}
