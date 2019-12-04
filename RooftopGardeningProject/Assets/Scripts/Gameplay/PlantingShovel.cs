@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
+public class PlantingShovel : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject MovingCanvas;
     private Transform originalParent;
@@ -24,17 +24,17 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         RaycastHit hitInfo;
-            Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
-            if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
+        if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
+        {
+            Debug.Log(hitInfo.transform.name);
+            if (hitInfo.transform.tag == "Slot")
             {
-                Debug.Log(hitInfo.transform.name);
-                if (hitInfo.transform.tag == "Plant")
-                {
-                    Debug.Log("Watering Plant");
-                    //hitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
-                }
+                Debug.Log("Planting Seed");
+                hitInfo.transform.gameObject.GetComponent<GardenSlot>().OpenSeedMenu();
             }
+        }
         transform.SetParent(originalParent);
         transform.gameObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         transform.gameObject.GetComponent<RectTransform>().offsetMin = Vector2.zero;

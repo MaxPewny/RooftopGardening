@@ -10,6 +10,7 @@ public class PlantData
     public bool SlotUsed = false;
 
     public PlantType Type;
+
     public Level PlantLevel;
     public CareState PlantCareState;
     public WaterLevel PlantWaterLevel;

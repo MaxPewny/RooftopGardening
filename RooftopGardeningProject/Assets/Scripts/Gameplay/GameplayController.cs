@@ -11,7 +11,10 @@ public class GameplayController : Singleton<GameplayController>
 
     public List<PlantCurrency> PlantCurrencies = new List<PlantCurrency>();
 
+    public List<GardenData> GardenDatas = new List<GardenData>();
+
     public List<List<PlantData>> PlantDatas = new List<List<PlantData>>();
+
 
     public int GardenSpotsCount = 1;
     public int PlantsPerSpotCount = 3;
@@ -27,6 +30,8 @@ public class GameplayController : Singleton<GameplayController>
         for (int i = 0; i < GardenSpotsCount; i++)
         {
             PlantDatas.Add(new List<PlantData>());
+            GardenDatas.Add(new GardenData());
+            GardenDatas[i].GardenNumber = i;
 
             for (int j = 0; j < PlantsPerSpotCount; j++)
             {
@@ -47,13 +52,18 @@ public class GameplayController : Singleton<GameplayController>
             {
                 if (data.SlotUsed == true)
                 {
-                    Check(data);
+                    CheckPlant(data);
                 }
             } 
         }
+
+        foreach (GardenData data in GardenDatas)
+        {
+            CheckGarden(data);
+        }
     }
 
-    public void Check(PlantData UsedData)
+    public void CheckPlant(PlantData UsedData)
     {
         if (DateTime.Now >= DateTime.Parse(UsedData.NextWaterDate)) 
         {
@@ -90,6 +100,18 @@ public class GameplayController : Singleton<GameplayController>
 
             }
 
+        }
+    }
+
+    public void CheckGarden(GardenData UsedData) 
+    {
+        if (DateTime.Now >= DateTime.Parse(UsedData.NextWeedGrowthDate))
+        {
+            UsedData.WeedCounter += UnityEngine.Random.Range(0, 4);
+            if (UsedData.WeedCounter > UsedData.MaxWeedCounter)
+            {
+                UsedData.WeedCounter = UsedData.MaxWeedCounter;
+            }
         }
     }
 
@@ -132,16 +154,43 @@ public class GameplayController : Singleton<GameplayController>
             foreach (PlantData data in PlantDatas[i])
             {
                 if (data.GardenNumber == GardenNr && data.SlotNumber == PlantNr)
-                {
+                {   
                     foreach (PlantCurrency currency in PlantCurrencies)
                     {
                         if (currency.Plant == data.Type)
                         {
                             currency.Fruit++;
+                            data.FruitsCounter--;
                             return;
                         }
                     }
                     return;
+                }
+            }
+        }
+    }
+
+    public void ResetData(int GardenNr, int PlantNr)
+    {
+        for (int i = 0; i < PlantDatas.Count; i++)
+        {
+            foreach (PlantData data in PlantDatas[i])
+            {
+                if (data.GardenNumber == GardenNr && data.SlotNumber == PlantNr)
+                {                     
+                    data.SlotUsed = false;
+
+                    data.PlantLevel = Level.LEVEL_0;
+                    data.MaxFruitCounter = 0;
+                    data.FruitsCounter = 0;
+
+                    data.BugIsThere = false;
+
+                    data.GrowCycleTime = 0;
+
+                    data.NextGrowthDate = "01.01.2000 12:00:00 ";
+                    data.NextWaterDate = "01.01.2000 12:00:00 ";
+                    data.NextBugDate = "01.01.2000 12:00:00 ";
                 }
             }
         }

@@ -515,6 +515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bug
       objectReference: {fileID: 0}
+    - target: {fileID: 7325284801394575819, guid: 46d2f7f0ae259b045a31358f26a45e58,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bug
+      objectReference: {fileID: 0}
     - target: {fileID: 2323561549199130278, guid: 46d2f7f0ae259b045a31358f26a45e58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,7 +578,7 @@ PrefabInstance:
     - target: {fileID: 2323561549199130278, guid: 46d2f7f0ae259b045a31358f26a45e58,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.528
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2323561549199130278, guid: 46d2f7f0ae259b045a31358f26a45e58,
         type: 3}

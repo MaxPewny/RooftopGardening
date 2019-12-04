@@ -9,6 +9,7 @@ TagManager:
   - Slot
   - Garden
   - SeedUI
+  - Bug
   layers:
   - Default
   - TransparentFX

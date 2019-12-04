@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 549513875}
   - component: {fileID: 549513874}
-  - component: {fileID: 549513873}
+  - component: {fileID: 4969193485523686599}
   m_Layer: 0
   m_Name: GardenSlot_1
-  m_TagString: Untagged
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,37 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b935ea51b752a419988e7448871543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlotUsed: 0
   SlotNumber: 0
   PlantPresets:
   - {fileID: 11400000, guid: 76ee051d1c4f7b7489a4bf3e52034b8d, type: 2}
   - {fileID: 11400000, guid: aa30264deb9b0984b8fa9111ab58ef79, type: 2}
   Plant: {fileID: 0}
---- !u!61 &549513873
-BoxCollider2D:
+--- !u!65 &4969193485523686599
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549513872}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4054526197536462708
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +92,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 549513875}
+  - {fileID: 3873657393524827063}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,7 +109,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GardenNumber: 0
-  PlantPrefab: {fileID: 0}
+  PlantPrefab: {fileID: 5106781866053858808, guid: e12ab7d05a52873458c17ab47ba2153d,
+    type: 3}
   EmptySlotPrefab: {fileID: 0}
-  PlantMenuPrefab: {fileID: 0}
-  UsedCanvas: {fileID: 0}
+  PlantMenu: {fileID: 0}
+--- !u!1 &7751138352002051789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3873657393524827063}
+  - component: {fileID: 6769020381137838617}
+  - component: {fileID: 402348569229109178}
+  m_Layer: 0
+  m_Name: GardenSlot_2
+  m_TagString: Slot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3873657393524827063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751138352002051789}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.373, y: 0.261, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4306951034384265127}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6769020381137838617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751138352002051789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b935ea51b752a419988e7448871543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SlotUsed: 0
+  SlotNumber: 1
+  PlantPresets:
+  - {fileID: 11400000, guid: 76ee051d1c4f7b7489a4bf3e52034b8d, type: 2}
+  - {fileID: 11400000, guid: aa30264deb9b0984b8fa9111ab58ef79, type: 2}
+  Plant: {fileID: 0}
+--- !u!65 &402348569229109178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751138352002051789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}

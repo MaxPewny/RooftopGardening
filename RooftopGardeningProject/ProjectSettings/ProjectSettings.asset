@@ -159,10 +159,10 @@ PlayerSettings:
   enableFrameTimingStats: 0
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
-  targetPixelDensity: 30
+  targetPixelDensity: 610
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
-  androidMaxAspectRatio: 2.1
+  androidMaxAspectRatio: 18.9
   applicationIdentifier:
     Standalone: com.Company.ProductName
   buildNumber: {}
@@ -280,7 +280,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 88dd6ea1180443b45b1b8414624cf1ba, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1abc46636bada814b9be902534391b11, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

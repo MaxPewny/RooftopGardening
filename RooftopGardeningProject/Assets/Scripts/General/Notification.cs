@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using core;
 #if UNITY_ANDROID
 using Unity.Notifications.Android;
 #endif
 
-public class Notification : MonoBehaviour
+public class Notification : Singleton<Notification>
 {
+    protected Notification() { }
 #if UNITY_ANDROID
     AndroidNotificationChannel defaultNotificationChannel = new AndroidNotificationChannel()
     {
@@ -20,25 +22,25 @@ public class Notification : MonoBehaviour
 
     private void Start()
     {
-#if UNITY_ANDROID
         OpenAndroidNotificationChannel();
-#endif
     }
 
-#if UNITY_ANDROID
     void OpenAndroidNotificationChannel()
     {
+#if UNITY_ANDROID
         AndroidNotificationCenter.RegisterNotificationChannel(defaultNotificationChannel);
+#endif
     }
 
     public void SendAndroidNotification(DateTime FireTime, string Title, string Text )
     {
+#if UNITY_ANDROID
         AndroidNotification notification = new AndroidNotification();
         notification.Title = Title;
         notification.Text = Text;
         notification.FireTime = FireTime;
 
         AndroidNotificationCenter.SendNotification(notification, "channel_0");
-    }
 #endif
+    }
 }

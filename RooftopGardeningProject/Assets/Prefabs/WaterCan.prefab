@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.1544589, g: 0.57814986, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -86,3 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e997025264c37a34bb8e22af16aab215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovingCanvas: {fileID: 0}
+  RaycastLayerMask:
+    serializedVersion: 2
+    m_Bits: 1

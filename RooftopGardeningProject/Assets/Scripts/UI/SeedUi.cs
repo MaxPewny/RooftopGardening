@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class SeedUi : MonoBehaviour, IPointerClickHandler
 {
     PlantType type;
 
-    public Sprite Icon;
+    public Image Icon;
 
-    public Text CountText;
+    public TextMeshProUGUI CountText;
 
-    public Text NameText;
+    public TextMeshProUGUI NameText;
 
     SeedMenu menu;
 
     public void SetValues(SeedPackPreset Pack, SeedMenu seedMenu) 
     {
         type = Pack.Type;
-        Icon = Pack.Seed;
+        Icon.sprite = Pack.Seed;
         NameText.text = Pack.Name;
         menu = seedMenu;
 

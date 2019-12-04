@@ -44,5 +44,5 @@ public enum Slot
 public enum PlantType 
 {
     TOMATO,
-    CABBAGE
+    CABBAGE 
 }

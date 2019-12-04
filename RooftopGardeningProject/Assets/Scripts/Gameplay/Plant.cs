@@ -73,6 +73,15 @@ public class Plant : MonoBehaviour
         ChangeSprite(Data.PlantLevel);
     }
 
+    public void Check() 
+    {
+        PlantData data = GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber];
+        ChangeSprite(data.PlantLevel);
+        BugAppearance(data.BugIsThere);
+        GrowFruit(data.FruitsCounter);
+    }
+
+
     public void ChangeSprite(Level PlantLevel) 
     {
         switch (PlantLevel)
@@ -110,7 +119,7 @@ public class Plant : MonoBehaviour
         GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
     }
 
-    void BugAppearance(bool BugThere)
+    public void BugAppearance(bool BugThere)
     {
         Bug.SetActive(BugThere);
         BugIsThere = BugThere;
@@ -118,12 +127,32 @@ public class Plant : MonoBehaviour
         
     }
 
-    void GrowFruit(int Amount)
+    public void GrowFruit(int Amount)
     {
-        for (int i = 0; i < Amount; i++)
+        int amount = Amount;
         {
-            Fruits[i].SetActive(true);
+            for (int i = 0; i < Fruits.Count; i++)
+            {
+                if (Fruits[i].activeSelf == true)
+                {
+                    amount--;
+                }
+            }
+            for(int i = 0; i < Fruits.Count; i++)
+            {
+                if (amount <= 0)
+                {
+                    return;
+                }
+                else if (Fruits[i].activeSelf == false)
+                {
+                    Fruits[i].SetActive(true);
+                    amount--;
+                }
+            }
+
         }
+        
     }
 
     //public void Check()

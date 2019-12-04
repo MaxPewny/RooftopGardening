@@ -8,6 +8,6 @@
     {
         Plant = GivenType;
         Fruit = 0;
-        Seed = 0;
+        Seed = 5;
     }
 }
