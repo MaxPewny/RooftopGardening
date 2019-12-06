@@ -8,9 +8,7 @@ public class Plant : MonoBehaviour
     public int GardenNumber;
     public int PlantNumber;
 
-    public Sprite Level1Sprite;
-    public Sprite Level2Sprite;
-    public Sprite Level3Sprite;
+    public PlantPreset preset;
 
     public GameObject Bug;
     public List<GameObject> Fruits = new List<GameObject>();
@@ -36,10 +34,12 @@ public class Plant : MonoBehaviour
         }
     }
 
-    public void LoadFromData(PlantData Data)
+    public void LoadFromData(PlantData Data, PlantPreset Preset)
     {
         GardenNumber = Data.GardenNumber;
         PlantNumber = Data.SlotNumber;
+
+        preset = Preset;
 
         ChangeSprite(Data.PlantLevel);
         GrowFruit(Data.FruitsCounter);
@@ -50,10 +50,6 @@ public class Plant : MonoBehaviour
     {
         GardenNumber = Data.GardenNumber;
         PlantNumber = Data.SlotNumber;
-
-        Level1Sprite = Preset.Level1Sprite;
-        Level2Sprite = Preset.Level2Sprite;
-        Level3Sprite = Preset.Level3Sprite;
 
         BugApperanceTime = Preset.BugApperanceTime;
         GrowCycleTime = Preset.GrowCycleTime;
@@ -89,13 +85,13 @@ public class Plant : MonoBehaviour
             case Level.LEVEL_0: 
                 break;
             case Level.LEVEL_1:
-                gameObject.GetComponent<SpriteRenderer>().sprite = Level1Sprite;
+                gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[0].UsedSprite;
                 break;
             case Level.LEVEL_2:
-                gameObject.GetComponent<SpriteRenderer>().sprite = Level2Sprite;
+                gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[1].UsedSprite;
                 break;
             case Level.LEVEL_3:
-                gameObject.GetComponent<SpriteRenderer>().sprite = Level3Sprite;
+                gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[2].UsedSprite;
                 break;
             default:
                 Debug.Log("Switch: no case");
@@ -106,6 +102,11 @@ public class Plant : MonoBehaviour
     public void WaterPlant()
     {
         GameplayController.Instance.WaterPlant(GardenNumber, PlantNumber, WaterCycleTime);
+    }
+
+    public void FertilizePlant()
+    {
+        GameplayController.Instance.FertilizePlant(GardenNumber, PlantNumber, 1);
     }
 
     public void BugRemoved()

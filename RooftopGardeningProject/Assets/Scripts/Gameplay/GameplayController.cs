@@ -32,6 +32,7 @@ public class GameplayController : Singleton<GameplayController>
             PlantDatas.Add(new List<PlantData>());
             GardenDatas.Add(new GardenData());
             GardenDatas[i].GardenNumber = i;
+            GardenDatas[i].NextWeedGrowthDate = DateTime.Now.AddHours(GardenDatas[i].WeedAppearanceTimer).ToString() ;
 
             for (int j = 0; j < PlantsPerSpotCount; j++)
             {
@@ -105,6 +106,7 @@ public class GameplayController : Singleton<GameplayController>
 
     public void CheckGarden(GardenData UsedData) 
     {
+
         if (DateTime.Now >= DateTime.Parse(UsedData.NextWeedGrowthDate))
         {
             UsedData.WeedCounter += UnityEngine.Random.Range(0, 4);
@@ -124,6 +126,24 @@ public class GameplayController : Singleton<GameplayController>
                 if (data.GardenNumber == GardenNr && data.SlotNumber == PlantNr)
                 {
                     data.NextWaterDate = DateTime.Now.AddHours(WaterCycleTime).ToString();
+                    return;
+                }
+            }
+        }
+    }
+
+    public void FertilizePlant(int GardenNr, int PlantNr, float FertilizerTime)
+    {
+        for (int i = 0; i < PlantDatas.Count; i++)
+        {
+            foreach (PlantData data in PlantDatas[i])
+            {
+                if (data.GardenNumber == GardenNr && data.SlotNumber == PlantNr)
+                {
+                    TimeSpan time = DateTime.Parse(data.NextGrowthDate) - DateTime.Now;
+                    //time = time.;
+                    //data.NextGrowthDate = DateTime.Now.AddHours(WaterCycleTime).ToString();
+
                     return;
                 }
             }

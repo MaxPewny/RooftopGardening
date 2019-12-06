@@ -6,7 +6,7 @@ public class GardenData
 {
     public int GardenNumber;
 
-    public float WeedAppearanceTimer;
+    public float WeedAppearanceTimer = 1;
 
     public int WeedCounter = 0;
 

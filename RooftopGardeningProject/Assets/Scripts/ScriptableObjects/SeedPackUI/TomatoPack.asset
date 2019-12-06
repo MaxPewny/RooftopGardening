@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TomatoPack
   m_EditorClassIdentifier: 
   Type: 0
-  Seed: {fileID: 0}
+  Seed: {fileID: -6714344759670153599, guid: 90a2e0c4735ec8b4d9027316345d3b4c, type: 3}
   Name: TomatoSeeds
