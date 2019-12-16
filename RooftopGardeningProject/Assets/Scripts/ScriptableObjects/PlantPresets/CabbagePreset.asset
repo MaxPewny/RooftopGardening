@@ -13,9 +13,25 @@ MonoBehaviour:
   m_Name: CabbagePreset
   m_EditorClassIdentifier: 
   Type: 1
-  Level1Sprite: {fileID: 21300000, guid: e60cd72604e99d54c93438b49870bd54, type: 3}
-  Level2Sprite: {fileID: 21300000, guid: 8a8b566b9340c8b43ae0260563049ae1, type: 3}
-  Level3Sprite: {fileID: 21300000, guid: 1abc46636bada814b9be902534391b11, type: 3}
+  MaxLevel: 3
+  ExtraObjects: []
+  PlantObjects:
+  - ObjectLevel: 1
+    UsedSprite: {fileID: 21300000, guid: e60cd72604e99d54c93438b49870bd54, type: 3}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - ObjectLevel: 2
+    UsedSprite: {fileID: 21300000, guid: 8a8b566b9340c8b43ae0260563049ae1, type: 3}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - ObjectLevel: 3
+    UsedSprite: {fileID: 21300000, guid: 1abc46636bada814b9be902534391b11, type: 3}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  FruitObjects: []
   BugApperanceTime: 1
   GrowCycleTime: 1
   WaterCycleTime: 1

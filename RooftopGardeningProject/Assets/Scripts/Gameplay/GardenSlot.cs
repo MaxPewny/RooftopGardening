@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class GardenSlot : MonoBehaviour, IPointerClickHandler
-{
+public class GardenSlot : MonoBehaviour 
+{ 
     public bool SlotUsed = false;
     public int SlotNumber;
     private Garden currentGarden;
@@ -55,6 +54,13 @@ public class GardenSlot : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    public void ResetPlantSlot()
+    {
+        SlotUsed = false;
+        GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].SlotUsed = false;
+        Destroy(Plant);
+    }
+
     public void DebugGrowPlant() 
     {
         if (SlotUsed == true)
@@ -87,11 +93,6 @@ public class GardenSlot : MonoBehaviour, IPointerClickHandler
             
             Plant.GetComponent<Plant>().BugAppearance(GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].BugIsThere);
         }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        //throw new System.NotImplementedException();
     }
 }
 

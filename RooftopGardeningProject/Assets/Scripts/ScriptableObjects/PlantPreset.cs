@@ -37,6 +37,7 @@ public class PlantPreset : ScriptableObject
     public float BugApperanceTime = 1;
     public float GrowCycleTime = 1;
     public float WaterCycleTime = 1;
+    public float FruitGrowthTime = 1;
 
     public int MaxFruitCounter;
 

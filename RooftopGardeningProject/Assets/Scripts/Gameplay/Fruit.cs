@@ -7,6 +7,8 @@ public class Fruit : MonoBehaviour, IPointerClickHandler
 {
     private Plant currentPlant;
 
+    private bool isRipe = true;
+
     private void Start()
     {
         currentPlant = GetComponentInParent<Plant>();
@@ -14,8 +16,11 @@ public class Fruit : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        currentPlant.FruitHarvested();
-        gameObject.SetActive(false);
+        if (isRipe)
+        {
+            currentPlant.FruitHarvested();
+            gameObject.SetActive(false);
+        }
     }
     
 }

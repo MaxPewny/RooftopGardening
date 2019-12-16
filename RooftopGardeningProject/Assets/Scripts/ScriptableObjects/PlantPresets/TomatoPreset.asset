@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   MaxLevel: 0
-  ExtraObjects: []
+  ExtraObjects:
+  - ObjectLevel: 0
+    UsedSprite: {fileID: 0}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
   PlantObjects: []
   FruitObjects: []
   BugApperanceTime: 1

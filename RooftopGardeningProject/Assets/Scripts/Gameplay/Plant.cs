@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Plant : MonoBehaviour
+public class Plant : MonoBehaviour, IPointerClickHandler
 {
     public int GardenNumber;
     public int PlantNumber;
@@ -11,6 +12,7 @@ public class Plant : MonoBehaviour
     public PlantPreset preset;
 
     public GameObject Bug;
+    public GameObject FruitPrefab;
     public List<GameObject> Fruits = new List<GameObject>();
 
     public float BugApperanceTime = 1; // TODO: move to Scriptable Object?
@@ -18,6 +20,8 @@ public class Plant : MonoBehaviour
     public float WaterCycleTime = 1;
 
     public bool BugIsThere = false;
+    private bool hasFruits = false;
+    private bool isRipe = false;
 
     private void Awake()
     {
@@ -42,6 +46,7 @@ public class Plant : MonoBehaviour
         preset = Preset;
 
         ChangeSprite(Data.PlantLevel);
+        SetFruits();
         GrowFruit(Data.FruitsCounter);
         BugAppearance(Data.BugIsThere);
     }
@@ -86,17 +91,45 @@ public class Plant : MonoBehaviour
                 break;
             case Level.LEVEL_1:
                 gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[0].UsedSprite;
+                transform.localScale += preset.PlantObjects[0].Position;
+                transform.localScale += preset.PlantObjects[0].Scale;
+                gameObject.GetComponent<BoxCollider>().size += preset.PlantObjects[0].ColliderSize;
                 break;
             case Level.LEVEL_2:
                 gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[1].UsedSprite;
+                transform.localScale += preset.PlantObjects[1].Position;
+                transform.localScale += preset.PlantObjects[1].Scale;
+                gameObject.GetComponent<BoxCollider>().size += preset.PlantObjects[1].ColliderSize;
                 break;
             case Level.LEVEL_3:
                 gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[2].UsedSprite;
+                transform.localScale += preset.PlantObjects[2].Position;
+                transform.localScale += preset.PlantObjects[2].Scale;
+                gameObject.GetComponent<BoxCollider>().size += preset.PlantObjects[2].ColliderSize;
+                isRipe = true;
                 break;
             default:
                 Debug.Log("Switch: no case");
                 break;
         }
+    }
+
+    public void SetFruits() 
+    {
+        if (preset.FruitObjects.Count == 0)
+        {
+            hasFruits = false;
+        }
+        else 
+        {
+            hasFruits = true;
+            foreach (var fruitPreset in preset.FruitObjects)
+            {
+                GameObject fruit = Instantiate(FruitPrefab, fruitPreset.Position, Quaternion.identity, transform);
+                Fruits.Add(fruit);
+                fruit.gameObject.SetActive(false);
+            }
+        }      
     }
 
     public void WaterPlant()
@@ -151,9 +184,16 @@ public class Plant : MonoBehaviour
                     amount--;
                 }
             }
+        }     
+    }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!hasFruits && isRipe)
+        {
+            GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
+            GetComponentInParent<GardenSlot>().ResetPlantSlot();
         }
-        
     }
 
     //public void Check()
