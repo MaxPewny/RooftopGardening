@@ -16,13 +16,44 @@ MonoBehaviour:
   MaxLevel: 0
   ExtraObjects:
   - ObjectLevel: 0
-    UsedSprite: {fileID: 0}
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 0, y: 0, z: 0}
+    UsedSprite: {fileID: 21300000, guid: 5a7a7561e42a8fd4ab491738a277a763, type: 3}
+    Position: {x: 0, y: 0, z: 1}
+    Scale: {x: 1.2, y: 1.2, z: 1.2}
     ColliderSize: {x: 0, y: 0, z: 0}
-  PlantObjects: []
-  FruitObjects: []
+  PlantObjects:
+  - ObjectLevel: 1
+    UsedSprite: {fileID: 21300000, guid: f8b8ca19cfbba7f4ba86bf7324c455be, type: 3}
+    Position: {x: 0, y: -0.2, z: 0}
+    Scale: {x: 0.4, y: 0.4, z: 0.5}
+    ColliderSize: {x: 1, y: 1, z: 0.2}
+  - ObjectLevel: 2
+    UsedSprite: {fileID: 21300000, guid: 0f101556a238b4045835a313554cb349, type: 3}
+    Position: {x: 0, y: 0.5, z: 0}
+    Scale: {x: 0.5, y: 0.5, z: 0.5}
+    ColliderSize: {x: 3, y: 6, z: 0.2}
+  - ObjectLevel: 3
+    UsedSprite: {fileID: 21300000, guid: 76412428c30e4564badf2a463eeb0a79, type: 3}
+    Position: {x: 0, y: 1, z: 0}
+    Scale: {x: 0.7, y: 0.7, z: 0.7}
+    ColliderSize: {x: 2, y: 6, z: 0.2}
+  FruitObjects:
+  - RipeSprite: {fileID: 21300000, guid: 3c075104a46a22046834e94a9ce1e5d8, type: 3}
+    UnripeSprite: {fileID: 21300000, guid: 90c8b477fd71f7848bf424ea751517a9, type: 3}
+    Position: {x: -0.12, y: 1.66, z: -1}
+    Scale: {x: 0.25, y: 0.25, z: 1}
+    ColliderSize: {x: 2, y: 2, z: 0.1}
+  - RipeSprite: {fileID: 21300000, guid: 3c075104a46a22046834e94a9ce1e5d8, type: 3}
+    UnripeSprite: {fileID: 21300000, guid: 90c8b477fd71f7848bf424ea751517a9, type: 3}
+    Position: {x: 0.04, y: 0.15, z: -1}
+    Scale: {x: 0.25, y: 0.25, z: 1}
+    ColliderSize: {x: 2, y: 2, z: 0.1}
+  - RipeSprite: {fileID: 21300000, guid: 3c075104a46a22046834e94a9ce1e5d8, type: 3}
+    UnripeSprite: {fileID: 21300000, guid: 90c8b477fd71f7848bf424ea751517a9, type: 3}
+    Position: {x: 0.5, y: -0.2, z: -1}
+    Scale: {x: 0.25, y: 0.25, z: 1}
+    ColliderSize: {x: 2, y: 2, z: 0.1}
   BugApperanceTime: 1
   GrowCycleTime: 1
   WaterCycleTime: 1
+  FruitGrowthTime: 1
   MaxFruitCounter: 4

@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Bug : MonoBehaviour, IPointerClickHandler
 {
+    public GameObject bugExpelVfx;
+
     public int RemoveTapAmount = 10;
     private int removeTapCount = 0;
 
@@ -23,9 +25,10 @@ public class Bug : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log("click");
         removeTapCount--;
-        if (removeTapCount <= 0) 
+        if (removeTapCount <= 0)
         {
             transform.GetComponentInParent<Plant>().BugRemoved();
+            Instantiate(bugExpelVfx, transform.position, transform.rotation);
             gameObject.SetActive(false);
         }
     }

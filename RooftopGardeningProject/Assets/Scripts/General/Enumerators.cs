@@ -46,3 +46,8 @@ public enum PlantType
     TOMATO,
     CABBAGE 
 }
+
+public enum Neighbor
+{
+    HARALD,
+}

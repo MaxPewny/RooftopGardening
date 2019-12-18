@@ -12,16 +12,21 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public PlantPreset preset;
 
     public GameObject Bug;
+    public GameObject PlantDisplay;
     public GameObject FruitPrefab;
+    public GameObject ExtraPrefab;
     public List<GameObject> Fruits = new List<GameObject>();
 
     public float BugApperanceTime = 1; // TODO: move to Scriptable Object?
     public float GrowCycleTime = 1;
     public float WaterCycleTime = 1;
 
-    public bool BugIsThere = false;
+    private Level plantLevel = Level.LEVEL_0;
+    private int fruitAmount;
+    private bool bugIsThere = false;
     private bool hasFruits = false;
     private bool isRipe = false;
+    private bool dataSet = false;
 
     private void Awake()
     {
@@ -38,6 +43,11 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    private void Update()
+    {
+        Check();
+    }
+
     public void LoadFromData(PlantData Data, PlantPreset Preset)
     {
         GardenNumber = Data.GardenNumber;
@@ -46,15 +56,20 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         preset = Preset;
 
         ChangeSprite(Data.PlantLevel);
-        SetFruits();
+        SetFruits(preset.FruitGrowthTime);
+        SetExtras();
         GrowFruit(Data.FruitsCounter);
         BugAppearance(Data.BugIsThere);
+
+        dataSet = true;
     }
 
     public void SetData(PlantPreset Preset, PlantData Data) 
     {
         GardenNumber = Data.GardenNumber;
         PlantNumber = Data.SlotNumber;
+
+        preset = Preset;
 
         BugApperanceTime = Preset.BugApperanceTime;
         GrowCycleTime = Preset.GrowCycleTime;
@@ -72,40 +87,58 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         Data.SlotUsed = true;
 
         ChangeSprite(Data.PlantLevel);
+        SetFruits(preset.FruitGrowthTime);
+        SetExtras();
+
+        dataSet = true;
     }
 
     public void Check() 
     {
-        PlantData data = GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber];
-        ChangeSprite(data.PlantLevel);
-        BugAppearance(data.BugIsThere);
-        GrowFruit(data.FruitsCounter);
+        if (dataSet)
+        {
+            if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].PlantLevel != plantLevel)
+            {
+                ChangeSprite(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].PlantLevel);
+            }
+            if (!bugIsThere)
+            {
+                BugAppearance(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].BugIsThere);
+            }
+            if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].FruitsCounter != fruitAmount)
+            {
+                GrowFruit(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].FruitsCounter);
+            }
+        }
     }
 
 
     public void ChangeSprite(Level PlantLevel) 
     {
+        //Debug.Log(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].SlotNumber.ToString());
+        plantLevel = PlantLevel;
+
         switch (PlantLevel)
         {
             case Level.LEVEL_0: 
                 break;
             case Level.LEVEL_1:
-                gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[0].UsedSprite;
-                transform.localScale += preset.PlantObjects[0].Position;
-                transform.localScale += preset.PlantObjects[0].Scale;
-                gameObject.GetComponent<BoxCollider>().size += preset.PlantObjects[0].ColliderSize;
+                PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[0].UsedSprite;
+                PlantDisplay.transform.localPosition = preset.PlantObjects[0].Position;
+                PlantDisplay.transform.localScale = preset.PlantObjects[0].Scale;
+                gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[0].ColliderSize;
                 break;
             case Level.LEVEL_2:
-                gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[1].UsedSprite;
-                transform.localScale += preset.PlantObjects[1].Position;
-                transform.localScale += preset.PlantObjects[1].Scale;
-                gameObject.GetComponent<BoxCollider>().size += preset.PlantObjects[1].ColliderSize;
+                PlantDisplay.gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[1].UsedSprite;
+                PlantDisplay.transform.localPosition = preset.PlantObjects[1].Position;
+                PlantDisplay.transform.localScale = preset.PlantObjects[1].Scale;
+                gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[1].ColliderSize;
                 break;
             case Level.LEVEL_3:
-                gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[2].UsedSprite;
-                transform.localScale += preset.PlantObjects[2].Position;
-                transform.localScale += preset.PlantObjects[2].Scale;
-                gameObject.GetComponent<BoxCollider>().size += preset.PlantObjects[2].ColliderSize;
+                PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[2].UsedSprite;
+                PlantDisplay.transform.localPosition = preset.PlantObjects[2].Position;
+                PlantDisplay.transform.localScale = preset.PlantObjects[2].Scale;
+                gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[2].ColliderSize;
                 isRipe = true;
                 break;
             default:
@@ -114,7 +147,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void SetFruits() 
+    public void SetFruits(float FruitTimer) 
     {
         if (preset.FruitObjects.Count == 0)
         {
@@ -122,13 +155,29 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         }
         else 
         {
+            transform.GetComponent<Collider>().enabled = false;
+            int fruitCount = 0;
             hasFruits = true;
             foreach (var fruitPreset in preset.FruitObjects)
             {
-                GameObject fruit = Instantiate(FruitPrefab, fruitPreset.Position, Quaternion.identity, transform);
+                GameObject fruit = Instantiate(FruitPrefab, transform.position + fruitPreset.Position, Quaternion.identity, transform);
+                fruit.transform.localScale = fruitPreset.Scale;
+                fruit.GetComponent<BoxCollider>().size = fruitPreset.ColliderSize;
                 Fruits.Add(fruit);
+                fruit.GetComponent<SpriteRenderer>().sprite = fruitPreset.RipeSprite;
                 fruit.gameObject.SetActive(false);
+                fruitCount++;
             }
+        }      
+    }
+
+    public void SetExtras()
+    {
+        foreach (var extraPreset in preset.ExtraObjects)
+        {
+            GameObject extra = Instantiate(ExtraPrefab, transform.position + extraPreset.Position, Quaternion.identity, transform);
+            extra.transform.localScale = extraPreset.Scale;
+            extra.GetComponent<SpriteRenderer>().sprite = extraPreset.UsedSprite;
         }      
     }
 
@@ -145,25 +194,30 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public void BugRemoved()
     {
         GameplayController.Instance.BugRemoved(GardenNumber, PlantNumber, BugApperanceTime);
-        BugIsThere = false;
+        bugIsThere = false;
+        if (!hasFruits)
+        {
+            transform.GetComponent<Collider>().enabled = true;
+        }
     }
 
     public void FruitHarvested()
     {
         GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
+        --fruitAmount;
     }
 
-    public void BugAppearance(bool BugThere)
+    public void BugAppearance(bool BugIsThere)
     {
-        Bug.SetActive(BugThere);
-        BugIsThere = BugThere;
-
-        
+            Bug.SetActive(BugIsThere);
+            bugIsThere = BugIsThere;
+            transform.GetComponent<Collider>().enabled = !BugIsThere;
     }
 
     public void GrowFruit(int Amount)
     {
         int amount = Amount;
+        fruitAmount = Amount;
         {
             for (int i = 0; i < Fruits.Count; i++)
             {
@@ -189,6 +243,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("hi");
         if (!hasFruits && isRipe)
         {
             GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);

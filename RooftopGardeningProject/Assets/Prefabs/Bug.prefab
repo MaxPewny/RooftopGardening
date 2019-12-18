@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc868431072d83640a1b8b1a4441a316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bugExpelVfx: {fileID: 4190620289610641116, guid: 8d10367cac43e0549846ea037fba7896,
+    type: 3}
   RemoveTapAmount: 10
 --- !u!61 &7215333566886410689
 BoxCollider2D:

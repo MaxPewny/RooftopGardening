@@ -15,8 +15,11 @@ public class GameplayController : Singleton<GameplayController>
 
     public List<List<PlantData>> PlantDatas = new List<List<PlantData>>();
 
+    public List<FruitData> FruitDatas = new List<FruitData>();
 
-    public int GardenSpotsCount = 1;
+    public float PlayerXp;
+
+    public int GardenSpotsCount = 2;
     public int PlantsPerSpotCount = 3;
 
     private void Awake()
@@ -38,29 +41,32 @@ public class GameplayController : Singleton<GameplayController>
             {
                 PlantDatas[i].Add(new PlantData());
                 PlantDatas[i][j].GardenNumber = i;
-                PlantDatas[i][j].FruitsCounter = j;
+                PlantDatas[i][j].SlotNumber = j;
             }
         }
-
-        
     }
 
-    public void FixedUpdate() 
+    public void Update()
     {
-        for (int i = 0; i < PlantDatas.Count; i++)
+        foreach (List<PlantData> list in PlantDatas)
         {
-            foreach (PlantData data in PlantDatas[i])
+            foreach (PlantData data in list)
             {
                 if (data.SlotUsed == true)
                 {
                     CheckPlant(data);
                 }
-            } 
+            }
         }
 
         foreach (GardenData data in GardenDatas)
         {
             CheckGarden(data);
+        }
+
+        foreach (FruitData data in FruitDatas)
+        {
+            CheckFruit(data);
         }
     }
 
@@ -98,9 +104,7 @@ public class GameplayController : Singleton<GameplayController>
                 {
                     UsedData.FruitsCounter++;
                 }
-
             }
-
         }
     }
 
@@ -114,6 +118,16 @@ public class GameplayController : Singleton<GameplayController>
             {
                 UsedData.WeedCounter = UsedData.MaxWeedCounter;
             }
+        }
+    }
+
+    public void CheckFruit(FruitData UsedData)
+    {
+
+        if (!UsedData.IsRipe && DateTime.Now >= DateTime.Parse(UsedData.NextGrowthDate))
+        {
+            UsedData.IsRipe = true;
+            
         }
     }
 
