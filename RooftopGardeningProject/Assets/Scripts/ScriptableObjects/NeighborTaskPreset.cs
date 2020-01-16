@@ -9,10 +9,13 @@ public class NeighborTaskPreset : ScriptableObject
     public class ObjectivePair
     {
         public PlantType Type;
-        public int Count;
+        public uint Count;
+        public Sprite Icon;
     }
 
     public Neighbor TaskGiver;
+
+    public Level RequiredLevel;
 
     public string Name;
 

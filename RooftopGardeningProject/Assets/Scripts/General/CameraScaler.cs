@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraScaleTest : MonoBehaviour
+public class CameraScaler : MonoBehaviour
 {
     public float aspectHeight = 16.0f;
     public float aspectWidth = 9.0f;
@@ -14,7 +14,7 @@ public class cameraScaleTest : MonoBehaviour
         // hard-coded for 16:9, but you could make them into public
         // variables instead so you can set them at design time)
 
-        float targetaspect = aspectHeight / aspectWidth;
+        float targetaspect = aspectWidth / aspectHeight;
 
         // determine the game window's current aspect ratio
         float windowaspect = (float)Screen.width / (float)Screen.height;

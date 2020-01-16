@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4306951034384265127}
   - component: {fileID: 1851323880569277367}
+  - component: {fileID: 483561973843424635}
   m_Layer: 0
   m_Name: Garden
   m_TagString: Untagged
@@ -113,6 +114,22 @@ MonoBehaviour:
     type: 3}
   EmptySlotPrefab: {fileID: 0}
   PlantMenu: {fileID: 0}
+  WeedAppearanceTimer: 0
+  Weeds: []
+--- !u!114 &483561973843424635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054526197536462708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ece1e50352f6544e925bceb67e0211a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aspectHeight: 16
+  aspectWidth: 9
 --- !u!1 &7751138352002051789
 GameObject:
   m_ObjectHideFlags: 0

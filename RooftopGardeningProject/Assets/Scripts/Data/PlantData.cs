@@ -12,6 +12,7 @@ public class PlantData
     public PlantType Type;
 
     public Level PlantLevel;
+    public Level MaxPlantLevel;
     public CareState PlantCareState;
     public WaterLevel PlantWaterLevel;
 

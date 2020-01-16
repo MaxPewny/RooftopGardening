@@ -611,6 +611,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 866a1469892be5643ba381841b774cd1, type: 3}
+--- !u!1 &2085339843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4285455000322378861, guid: 866a1469892be5643ba381841b774cd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2085339842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2085339844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085339843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1001 &5984884601722286910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,6 +725,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5984884603337150819, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5984884602588738596, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -718,10 +745,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1801490274}
-    - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
+    - target: {fileID: 5984884602890145172, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
-      propertyPath: NextSceneRightName
-      value: Garden_2
+      propertyPath: m_AnchoredPosition.x
+      value: -13.105874
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b486316e520f5e499fabba1eb11abcc, type: 3}

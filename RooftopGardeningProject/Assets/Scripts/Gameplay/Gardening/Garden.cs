@@ -18,6 +18,8 @@ public class Garden : MonoBehaviour
 
     private void Start()
     {
+        GameplayController.Instance.CurrentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        Debug.Log(GameplayController.Instance.CurrentSceneName);
         GameplayController.Instance.GardenDatas[GardenNumber].WeedAppearanceTimer = WeedAppearanceTimer;
 
         foreach (Weed weed in GetComponentsInChildren<Weed>())

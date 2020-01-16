@@ -11,13 +11,18 @@ public class GameplayController : Singleton<GameplayController>
 
     public List<PlantCurrency> PlantCurrencies = new List<PlantCurrency>();
 
+    public List<NeighborData> NeighborDatas = new List<NeighborData>();
+
     public List<GardenData> GardenDatas = new List<GardenData>();
 
     public List<List<PlantData>> PlantDatas = new List<List<PlantData>>();
 
-    public List<FruitData> FruitDatas = new List<FruitData>();
+    //public List<FruitData> FruitDatas = new List<FruitData>();
+
+    public string CurrentSceneName;
 
     public float PlayerXp;
+    public Level PlayerLevel;
 
     public int GardenSpotsCount = 2;
     public int PlantsPerSpotCount = 3;
@@ -28,6 +33,11 @@ public class GameplayController : Singleton<GameplayController>
         foreach (PlantType plant in (PlantType[])Enum.GetValues(typeof(PlantType)))
         {
             PlantCurrencies.Add(new PlantCurrency(plant));
+        }
+
+        foreach (Neighbor neighbor in (Neighbor[])Enum.GetValues(typeof(Neighbor)))
+        {
+            NeighborDatas.Add(new NeighborData(neighbor));
         }
 
         for (int i = 0; i < GardenSpotsCount; i++)
@@ -64,10 +74,10 @@ public class GameplayController : Singleton<GameplayController>
             CheckGarden(data);
         }
 
-        foreach (FruitData data in FruitDatas)
-        {
-            CheckFruit(data);
-        }
+        //foreach (FruitData data in FruitDatas)
+        //{
+        //    CheckFruit(data);
+        //}
     }
 
     public void CheckPlant(PlantData UsedData)
@@ -92,7 +102,7 @@ public class GameplayController : Singleton<GameplayController>
         }
         if (DateTime.Now >= DateTime.Parse(UsedData.NextGrowthDate))
         {
-            if (UsedData.PlantLevel < Level.LEVEL_3)
+            if (UsedData.PlantLevel < UsedData.MaxPlantLevel)
             {
                 UsedData.NextWaterDate = DateTime.Now.ToString();
                 UsedData.NextGrowthDate = DateTime.Now.AddHours(UsedData.GrowCycleTime).ToString();
@@ -121,15 +131,15 @@ public class GameplayController : Singleton<GameplayController>
         }
     }
 
-    public void CheckFruit(FruitData UsedData)
-    {
-
-        if (!UsedData.IsRipe && DateTime.Now >= DateTime.Parse(UsedData.NextGrowthDate))
-        {
-            UsedData.IsRipe = true;
-            
-        }
-    }
+    //public void CheckFruit(FruitData UsedData)
+    //{
+    //
+    //    if (!UsedData.IsRipe && DateTime.Now >= DateTime.Parse(UsedData.NextGrowthDate))
+    //    {
+    //        UsedData.IsRipe = true;
+    //        
+    //    }
+    //}
 
     public void WaterPlant(int GardenNr, int PlantNr, float WaterCycleTime)
     {

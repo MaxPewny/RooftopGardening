@@ -65,7 +65,7 @@ public class GardenSlot : MonoBehaviour
     {
         if (SlotUsed == true)
         {
-            if (GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].PlantLevel < Level.LEVEL_3)
+            if (GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].PlantLevel < GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].MaxPlantLevel)
             {
                 GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].PlantLevel++;
             }  

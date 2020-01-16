@@ -76,6 +76,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         WaterCycleTime = Preset.WaterCycleTime;
 
         Data.PlantLevel = Level.LEVEL_1;
+        Data.MaxPlantLevel = preset.MaxLevel;
         Data.FruitsCounter = 0;
         Data.Type = Preset.Type;
         Data.GrowCycleTime = Preset.GrowCycleTime;
@@ -118,6 +119,11 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         //Debug.Log(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].SlotNumber.ToString());
         plantLevel = PlantLevel;
 
+        if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].MaxPlantLevel == PlantLevel) 
+        {
+            isRipe = true; 
+        }
+
         switch (PlantLevel)
         {
             case Level.LEVEL_0: 
@@ -139,7 +145,6 @@ public class Plant : MonoBehaviour, IPointerClickHandler
                 PlantDisplay.transform.localPosition = preset.PlantObjects[2].Position;
                 PlantDisplay.transform.localScale = preset.PlantObjects[2].Scale;
                 gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[2].ColliderSize;
-                isRipe = true;
                 break;
             default:
                 Debug.Log("Switch: no case");

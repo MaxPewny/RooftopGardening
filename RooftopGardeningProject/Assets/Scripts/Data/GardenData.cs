@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GardenData 
 {
+    public bool isUnlocked;
+
     public int GardenNumber;
 
     public float WeedAppearanceTimer = 1;
