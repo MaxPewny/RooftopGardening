@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23202206, g: 0.24275643, b: 0.6226415, a: 1}
+  m_Color: {r: 0.23202206, g: 0.24275643, b: 0.6226415, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -521,6 +521,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b7c24b817206244f8b42653339152e2, type: 2}
   NeighborList: {fileID: 0}
   NeighborTaskList: {fileID: 0}
+  XpFill: {fileID: 0}
+  LevelDisplay: {fileID: 0}
   Name: {fileID: 687825002751340393}
   RemainingTasksText: {fileID: 687825003784214962}
   ReadyTasksText: {fileID: 687825003169129778}
