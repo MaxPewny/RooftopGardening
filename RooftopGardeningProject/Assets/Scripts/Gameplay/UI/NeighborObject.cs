@@ -36,6 +36,10 @@ public class NeighborObject : MonoBehaviour
                 usedData = data;
                 maxRemainingTasks = TaskPresets.Count;
                 remainingTasks = maxRemainingTasks - usedData.SolvedTasks;
+                if (remainingTasks < 0)
+                {
+                    remainingTasks = 0;
+                }
                 xp = usedData.NeighborXp;
                 level = (int)usedData.NeighborLevel;
 
@@ -50,6 +54,12 @@ public class NeighborObject : MonoBehaviour
 
     private void OnEnable()
     {
+        if (remainingTasks == 0)
+        {
+            ReadyTasksText.text = "0";
+            return;
+        }
+
         foreach (NeighborTaskPreset.ObjectivePair objective in TaskPresets[maxRemainingTasks - remainingTasks].Objectives)
         {
             foreach (PlantCurrency currency in GameplayController.Instance.PlantCurrencies)
@@ -72,6 +82,7 @@ public class NeighborObject : MonoBehaviour
     public void ShowTaskList() 
     {
         NeighborTaskList.SetActive(true);
+        //Debug.Log(maxRemainingTasks - remainingTasks);
         NeighborTaskList.GetComponent<TaskList>().SetUI(SelectedNeighbor, TaskPresets[maxRemainingTasks - remainingTasks], xp, level);
         NeighborList.SetActive(false);
     }

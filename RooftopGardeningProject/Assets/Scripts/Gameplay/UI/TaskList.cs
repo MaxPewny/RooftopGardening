@@ -42,10 +42,11 @@ public class TaskList : MonoBehaviour
 
     public void SwitchBack() 
     {
-        foreach (GameObject task in tasks)
+        for (int i = tasks.Count-1; i >=0; i--)
         {
-            Destroy(task);
+            Destroy(tasks[i]);
         }
+        
         tasks.Clear();
         NeighborList.SetActive(true);
         gameObject.SetActive(false);
