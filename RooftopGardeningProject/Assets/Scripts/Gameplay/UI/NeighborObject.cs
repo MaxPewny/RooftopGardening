@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NeighborObject : MonoBehaviour
 {
+    public MenuManager Manager;
     public Neighbor SelectedNeighbor;
 
     public List<NeighborTaskPreset> TaskPresets;

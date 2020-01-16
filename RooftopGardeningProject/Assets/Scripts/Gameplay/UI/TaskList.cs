@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TaskList : MonoBehaviour
 {
+    public MenuManager Manager;
     public Neighbor SelectedNeighbor;
 
     public Image XpFill;
@@ -17,7 +18,7 @@ public class TaskList : MonoBehaviour
 
     private float xp;
     private int level;
-    private List<GameObject> tasks;
+    private List<GameObject> tasks = new List<GameObject>();
 
     public void SetUI(Neighbor SetNeighbor, NeighborTaskPreset SetTaskPreset, float SetXp, int SetLevel) 
     {
@@ -35,8 +36,8 @@ public class TaskList : MonoBehaviour
     public void SetTasks(NeighborTaskPreset SetTaskPreset)
     {
         GameObject task = Instantiate(TaskPrefab,TaskCanvas.transform);
-        task.GetComponent<TaskObject>().SetPreset(SetTaskPreset, this);
         tasks.Add(task);
+        task.GetComponent<TaskObject>().SetPreset(SetTaskPreset, this);
     }
 
     public void SwitchBack() 
