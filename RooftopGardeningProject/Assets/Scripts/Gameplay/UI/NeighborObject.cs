@@ -20,7 +20,7 @@ public class NeighborObject : MonoBehaviour
     public Text RemainingTasksText;
     public Text ReadyTasksText;
 
-    private float xp;
+    private float xpFillValue;
     private int level;
     private int remainingTasks;
     private int maxRemainingTasks;
@@ -28,8 +28,6 @@ public class NeighborObject : MonoBehaviour
 
     public void SetValues(Neighbor UsedNeighbor, GameObject UsedNeighborList, GameObject UsedTaskList, MenuManager AssignedManager )
     {
-        NeighborData usedData;
-
         SelectedNeighbor = UsedNeighbor;
         NeighborList = UsedNeighborList;
         NeighborTaskList = UsedTaskList;
@@ -42,6 +40,12 @@ public class NeighborObject : MonoBehaviour
                 TaskPresets.RemoveAt(i);
             }
         }
+    }
+
+
+    private void OnEnable()
+    {
+        NeighborData usedData;
 
         foreach (NeighborData data in GameplayController.Instance.NeighborDatas)
         {
@@ -54,21 +58,22 @@ public class NeighborObject : MonoBehaviour
                 {
                     remainingTasks = 0;
                 }
-                xp = usedData.NeighborXp;
+                //Debug.Log("xFill " + xpFillValue);
+                //Debug.Log("xneigh " + usedData.NeighborXp);
+                //Debug.Log("xmax " + usedData.MaxXp);
+
+                xpFillValue = usedData.NeighborXp / usedData.MaxXp;
                 level = (int)usedData.NeighborLevel;
 
                 LevelDisplay.text = level.ToString();
-                XpFill.fillAmount = xp;
+                XpFill.fillAmount = xpFillValue;
                 Name.text = SelectedNeighbor.ToString();
                 RemainingTasksText.text = remainingTasks.ToString();
 
+                break;
             }
         }
-    }
 
-
-    private void OnEnable()
-    {
         if (remainingTasks == 0)
         {
             ReadyTasksText.text = "0";
@@ -94,12 +99,36 @@ public class NeighborObject : MonoBehaviour
         ReadyTasksText.text = readyTasks.ToString();
     }
 
+
+    private void Update()
+    {
+        foreach (NeighborData data in GameplayController.Instance.NeighborDatas)
+        {
+            if (data.NeighborEnum == SelectedNeighbor)
+            {
+                xpFillValue = data.NeighborXp / data.MaxXp;
+                level = (int)data.NeighborLevel;
+
+                LevelDisplay.text = level.ToString();
+                XpFill.fillAmount = xpFillValue;
+                return;
+            }
+        }
+    }
+
     public void ShowTaskList() 
     {
         NeighborTaskList.SetActive(true);
         Manager.SetActiveMenu(NeighborTaskList);
         //Debug.Log(maxRemainingTasks - remainingTasks);
-        NeighborTaskList.GetComponent<TaskList>().SetUI(SelectedNeighbor, TaskPresets[maxRemainingTasks - remainingTasks], xp, level);
+        if (maxRemainingTasks-remainingTasks >= maxRemainingTasks)
+        {
+            NeighborTaskList.GetComponent<TaskList>().SetUI(SelectedNeighbor, TaskPresets[0], xpFillValue, level);
+        }
+        else
+        {
+            NeighborTaskList.GetComponent<TaskList>().SetUI(SelectedNeighbor, TaskPresets[maxRemainingTasks - remainingTasks], xpFillValue, level);
+        }
         NeighborList.SetActive(false);
     }
 }

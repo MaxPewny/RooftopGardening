@@ -9,6 +9,8 @@ public class NeighborData
 
     public float NeighborXp;
 
+    public float MaxXp = 300;
+
     public int SolvedTasks;
 
     public NeighborData(Neighbor neighbor) 

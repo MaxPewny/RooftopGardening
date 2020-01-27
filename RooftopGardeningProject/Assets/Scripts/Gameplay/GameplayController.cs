@@ -23,12 +23,20 @@ public class GameplayController : Singleton<GameplayController>
 
     public float PlayerXp;
     public Level PlayerLevel;
+    public float MaxPlayerXp;
+
 
     public int GardenSpotsCount = 2;
     public int PlantsPerSpotCount = 3;
 
     private void Awake()
     {
+        MaxPlayerXp = 300 * (int)PlayerLevel;
+        if (MaxPlayerXp < 300)
+        {
+            MaxPlayerXp = 300;
+        }
+
         //The cast to(PlantType[]) is not strictly necessary, but does make the code 0.5 ns faster.
         foreach (PlantType plant in (PlantType[])Enum.GetValues(typeof(PlantType)))
         {
@@ -58,6 +66,8 @@ public class GameplayController : Singleton<GameplayController>
 
     public void Update()
     {
+        LevelUp();
+
         foreach (List<PlantData> list in PlantDatas)
         {
             foreach (PlantData data in list)
@@ -72,6 +82,11 @@ public class GameplayController : Singleton<GameplayController>
         foreach (GardenData data in GardenDatas)
         {
             CheckGarden(data);
+        }
+
+        foreach (NeighborData data in NeighborDatas)
+        {
+            CheckNeighbours(data);
         }
 
         //foreach (FruitData data in FruitDatas)
@@ -131,6 +146,49 @@ public class GameplayController : Singleton<GameplayController>
             }
         }
     }
+
+    public void CheckNeighbours(NeighborData UsedData)
+    {
+        if (UsedData.NeighborXp >= UsedData.MaxXp)
+        {
+            ++UsedData.NeighborLevel;
+
+            UsedData.NeighborXp = UsedData.NeighborXp - UsedData.MaxXp;
+
+            UsedData.MaxXp = 300 * ((int)UsedData.NeighborLevel + 1);
+
+            if (UsedData.MaxXp < 300)
+            {
+                UsedData.MaxXp = 300;
+            }
+
+
+            if (UsedData.NeighborXp < 0)
+            {
+                UsedData.NeighborXp = 0;
+            }
+
+        }
+    }
+
+    public void LevelUp()
+    {
+        if (PlayerXp >= MaxPlayerXp)
+        {
+            ++PlayerLevel;
+
+            PlayerXp = PlayerXp - MaxPlayerXp;
+
+            MaxPlayerXp = 300 * ((int)MaxPlayerXp + 1);
+
+
+            if (PlayerXp < 0)
+            {
+                PlayerXp = 0;
+            }
+        }
+    }
+
 
     //public void CheckFruit(FruitData UsedData)
     //{

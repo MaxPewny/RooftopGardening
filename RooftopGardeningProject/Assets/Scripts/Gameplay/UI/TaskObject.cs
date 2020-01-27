@@ -22,7 +22,7 @@ public class TaskObject : MonoBehaviour
     {
         preset = Preset;
         taskList = TaskList;
-        NameDisplay.text = preset.Name;
+        NameDisplay.text = preset.Description;
         SetUI(ref FirstIcon, ref FirstObjectiveText, 0);
         SetUI(ref SecondIcon, ref SecondObjectiveText, 1);
     }

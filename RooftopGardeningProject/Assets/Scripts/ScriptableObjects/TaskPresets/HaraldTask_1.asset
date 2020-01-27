@@ -15,7 +15,7 @@ MonoBehaviour:
   TaskGiver: 0
   RequiredLevel: 0
   Name: Harald will Salat
-  Description: SALAAAAT
+  Description: 
   RewardedXP: 300
   Objectives:
   - Type: 0

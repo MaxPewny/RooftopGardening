@@ -16,17 +16,17 @@ public class TaskList : MonoBehaviour
     public GameObject TaskCanvas;
     public GameObject TaskPrefab;
 
-    private float xp;
+    private float xpFillValue;
     private int level;
     private List<GameObject> tasks = new List<GameObject>();
 
     public void SetUI(Neighbor SetNeighbor, NeighborTaskPreset SetTaskPreset, float SetXp, int SetLevel) 
     {
         SelectedNeighbor = SetNeighbor;
-        xp = SetXp;
+        xpFillValue = SetXp;
         level = SetLevel;
 
-        XpFill.fillAmount = xp;
+        XpFill.fillAmount = xpFillValue;
         LevelDisplay.text = level.ToString();
         Name.text = SelectedNeighbor.ToString();
 
