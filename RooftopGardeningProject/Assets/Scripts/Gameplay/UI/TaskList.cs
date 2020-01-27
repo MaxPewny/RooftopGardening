@@ -42,13 +42,18 @@ public class TaskList : MonoBehaviour
 
     public void SwitchBack() 
     {
-        for (int i = tasks.Count-1; i >=0; i--)
+        Manager.SetActiveMenu(NeighborList);
+        
+        NeighborList.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        for (int i = tasks.Count - 1; i >= 0; i--)
         {
             Destroy(tasks[i]);
         }
-        
         tasks.Clear();
-        NeighborList.SetActive(true);
-        gameObject.SetActive(false);
     }
 }

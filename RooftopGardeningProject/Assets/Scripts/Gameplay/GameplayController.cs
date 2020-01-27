@@ -106,6 +106,7 @@ public class GameplayController : Singleton<GameplayController>
             {
                 UsedData.NextWaterDate = DateTime.Now.ToString();
                 UsedData.NextGrowthDate = DateTime.Now.AddHours(UsedData.GrowCycleTime).ToString();
+                Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen wachsen, sieh sie dir an");
                 UsedData.PlantLevel++;
             }
             else

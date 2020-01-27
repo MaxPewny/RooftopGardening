@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7830189, g: 0.19575472, b: 0.19575472, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -379,6 +379,8 @@ MonoBehaviour:
   SecondObjectiveText: {fileID: 4730198697491735846}
   FirstIcon: {fileID: 1940528230091244499}
   SecondIcon: {fileID: 6911765903840800977}
+  AvailableColor: {r: 0.05490196, g: 0.36078432, b: 0.07450981, a: 1}
+  NotAvailableColor: {r: 0.6431373, g: 0.11764707, b: 0.21568629, a: 1}
 --- !u!1 &7712190536398632656
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6431373, g: 0.11764706, b: 0.21568628, a: 1}
+  m_Color: {r: 0.6431373, g: 0.11764707, b: 0.21568629, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

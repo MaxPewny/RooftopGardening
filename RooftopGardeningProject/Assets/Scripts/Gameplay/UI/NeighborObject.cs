@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class NeighborObject : MonoBehaviour
 {
-    public MenuManager Manager;
     public Neighbor SelectedNeighbor;
-
-    public List<NeighborTaskPreset> TaskPresets;
-
+    
     public GameObject NeighborList;
     public GameObject NeighborTaskList;
+
+    public MenuManager Manager;
+
+    public List<NeighborTaskPreset> TaskPresets;
 
     public Image XpFill;
     public Text LevelDisplay;
@@ -25,9 +26,22 @@ public class NeighborObject : MonoBehaviour
     private int maxRemainingTasks;
     private int readyTasks;
 
-    private void Awake()
+    public void SetValues(Neighbor UsedNeighbor, GameObject UsedNeighborList, GameObject UsedTaskList, MenuManager AssignedManager )
     {
         NeighborData usedData;
+
+        SelectedNeighbor = UsedNeighbor;
+        NeighborList = UsedNeighborList;
+        NeighborTaskList = UsedTaskList;
+        Manager = AssignedManager;
+
+        for (int i = TaskPresets.Count - 1; i >= 0; i--)
+        {
+            if (TaskPresets[i].TaskGiver != SelectedNeighbor)
+            {
+                TaskPresets.RemoveAt(i);
+            }
+        }
 
         foreach (NeighborData data in GameplayController.Instance.NeighborDatas)
         {
@@ -51,6 +65,7 @@ public class NeighborObject : MonoBehaviour
             }
         }
     }
+
 
     private void OnEnable()
     {
@@ -82,6 +97,7 @@ public class NeighborObject : MonoBehaviour
     public void ShowTaskList() 
     {
         NeighborTaskList.SetActive(true);
+        Manager.SetActiveMenu(NeighborTaskList);
         //Debug.Log(maxRemainingTasks - remainingTasks);
         NeighborTaskList.GetComponent<TaskList>().SetUI(SelectedNeighbor, TaskPresets[maxRemainingTasks - remainingTasks], xp, level);
         NeighborList.SetActive(false);

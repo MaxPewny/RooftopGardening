@@ -12,6 +12,9 @@ public class TaskObject : MonoBehaviour
     public Image FirstIcon;
     public Image SecondIcon;
 
+    public Color AvailableColor;
+    public Color NotAvailableColor;
+
     private NeighborTaskPreset preset;
     private TaskList taskList;
 
@@ -33,6 +36,14 @@ public class TaskObject : MonoBehaviour
             if (currency.Plant == preset.Objectives[I].Type)
             {
                 ObjectiveText.text = currency.Fruit + " / " + preset.Objectives[I].Count;
+                if (currency.Fruit < preset.Objectives[I].Count)
+                {
+                    ObjectiveText.color = NotAvailableColor;
+                }
+                else
+                {
+                    ObjectiveText.color = AvailableColor;
+                }
                 return;
             }
         }

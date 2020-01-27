@@ -483,6 +483,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5984884603337150819, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5984884602588738596, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -513,128 +518,121 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DebugBugAppear
       objectReference: {fileID: 0}
+    - target: {fileID: 5984884602890145172, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
-      propertyPath: NextSceneRightName
+      propertyPath: NextSceneUpName
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
-      propertyPath: NextSceneLeftName
+      propertyPath: NextSceneDownName
       value: Garden_1
       objectReference: {fileID: 0}
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
-      propertyPath: RightButton
-      value: 
-      objectReference: {fileID: 1025608001}
-    - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
+      propertyPath: UnlockLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884602598445693, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
-      propertyPath: LeftButton
-      value: 
-      objectReference: {fileID: 1025608000}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5984884602031043110, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602031043110, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602031043110, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602031043110, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602294854240, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602294854240, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602294854240, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602294854240, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602294854240, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602795426546, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602795426546, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602795426546, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884602795426546, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884603138501826, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5984884603138501826, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884603138501826, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984884603138501826, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b486316e520f5e499fabba1eb11abcc, type: 3}
 --- !u!1 &1025607999 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5984884601803350501, guid: 1b486316e520f5e499fabba1eb11abcc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1025607998}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1025608000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 555059927136477808, guid: 1b486316e520f5e499fabba1eb11abcc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1025607998}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1025608001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2365894765823997054, guid: 1b486316e520f5e499fabba1eb11abcc,
     type: 3}
   m_PrefabInstance: {fileID: 1025607998}
   m_PrefabAsset: {fileID: 0}

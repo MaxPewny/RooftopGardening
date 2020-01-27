@@ -748,8 +748,60 @@ PrefabInstance:
     - target: {fileID: 5984884602890145172, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -13.105874
+      value: -0.000039100647
       objectReference: {fileID: 0}
+    - target: {fileID: 757039191339314431, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4162be1ffee1b734ab64425960e9fc4c,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1982660202a97374187d75c6fb569efc,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b30a3dc54144cc4cb4c455800971166,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: ddc29fb05d3f0984fa5dd544040c3433,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5b0e34525b86d44dba11a10d384b398,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5733d0acff2a1b7469998cedafaaa5aa,
+        type: 2}
+    - target: {fileID: 5984884603749826316, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b15faefa0d4c8e4da957563f2a20f65,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b486316e520f5e499fabba1eb11abcc, type: 3}
 --- !u!1001 &7965954155794367168

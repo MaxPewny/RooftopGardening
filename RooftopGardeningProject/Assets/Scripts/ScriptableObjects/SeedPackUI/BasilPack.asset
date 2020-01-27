@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc994961feec5444c9771586a41bbbc1, type: 3}
-  m_Name: TomatoPack
+  m_Name: BasilPack
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 6
   Seed: {fileID: -793301892236069691, guid: 90a2e0c4735ec8b4d9027316345d3b4c, type: 3}
-  Name: TomatoSeeds
+  Name: BasilSeeds

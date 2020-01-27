@@ -8,8 +8,6 @@ public class Garden : MonoBehaviour
 
     public GameObject PlantPrefab;
 
-    public GameObject EmptySlotPrefab;
-
     public GameObject PlantMenu;
 
     public float WeedAppearanceTimer;
@@ -19,7 +17,7 @@ public class Garden : MonoBehaviour
     private void Start()
     {
         GameplayController.Instance.CurrentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        Debug.Log(GameplayController.Instance.CurrentSceneName);
+        //Debug.Log(GameplayController.Instance.CurrentSceneName);
         GameplayController.Instance.GardenDatas[GardenNumber].WeedAppearanceTimer = WeedAppearanceTimer;
 
         foreach (Weed weed in GetComponentsInChildren<Weed>())
@@ -28,6 +26,7 @@ public class Garden : MonoBehaviour
             weed.gameObject.SetActive(false);
         }
         GameplayController.Instance.GardenDatas[GardenNumber].MaxWeedCounter = Weeds.Count;
+        Check();
     }
 
     public void Check()
