@@ -11,12 +11,15 @@ public class NeighborList : MonoBehaviour
     public GameObject TaskList;
     public MenuManager UsedManager;
 
-    private void Start()
+    private void Awake()
     {
         foreach (Neighbor neighbor in (Neighbor[])Enum.GetValues(typeof(Neighbor)))
         {
-            GameObject neighborObject = Instantiate(NeighborPrefab, ListCanvas.transform);
-            neighborObject.GetComponent<NeighborObject>().SetValues(neighbor, gameObject, TaskList, UsedManager);
+            if ((int)neighbor < (int)GameplayController.Instance.PlayerLevel)
+            {
+                GameObject neighborObject = Instantiate(NeighborPrefab, ListCanvas.transform);
+                neighborObject.GetComponent<NeighborObject>().SetValues(neighbor, gameObject, TaskList, UsedManager);
+            }
         }
     }
 }

@@ -8,6 +8,8 @@ public class GardenSlot : MonoBehaviour
     public int SlotNumber;
     private Garden currentGarden;
 
+    public GameObject Sign;
+
     public List<PlantPreset> PlantPresets;
     public GameObject Plant;
 
@@ -24,8 +26,9 @@ public class GardenSlot : MonoBehaviour
                 {
                     Plant.GetComponent<Plant>().LoadFromData(GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber], preset);
                 }
-            } 
+            }
             SlotUsed = true;
+            Sign.SetActive(false);
         }
     }
 
@@ -43,6 +46,7 @@ public class GardenSlot : MonoBehaviour
                     break;
                 }
             }
+            Sign.SetActive(false);
         }
     }
 
@@ -58,6 +62,7 @@ public class GardenSlot : MonoBehaviour
     {
         SlotUsed = false;
         GameplayController.Instance.PlantDatas[currentGarden.GardenNumber][SlotNumber].SlotUsed = false;
+        Sign.SetActive(true);
         Destroy(Plant);
     }
 

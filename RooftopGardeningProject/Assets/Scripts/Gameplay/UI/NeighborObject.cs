@@ -40,6 +40,36 @@ public class NeighborObject : MonoBehaviour
                 TaskPresets.RemoveAt(i);
             }
         }
+
+        NeighborData usedData;
+
+        foreach (NeighborData data in GameplayController.Instance.NeighborDatas)
+        {
+            if (data.NeighborEnum == SelectedNeighbor)
+            {
+                usedData = data;
+
+                xpFillValue = usedData.NeighborXp / usedData.MaxXp;
+                level = (int)usedData.NeighborLevel;
+
+                LevelDisplay.text = level.ToString();
+                XpFill.fillAmount = xpFillValue;
+                Name.text = SelectedNeighbor.ToString();
+                RemainingTasksText.text = remainingTasks.ToString();
+
+                maxRemainingTasks = TaskPresets.Count;
+                remainingTasks = maxRemainingTasks - usedData.SolvedTasks;
+                if (remainingTasks < 0)
+                {
+                    remainingTasks = 0;
+                }
+                //Debug.Log("xFill " + xpFillValue);
+                //Debug.Log("xneigh " + usedData.NeighborXp);
+                //Debug.Log("xmax " + usedData.MaxXp);
+
+                break;
+            }
+        }
     }
 
 
@@ -52,6 +82,15 @@ public class NeighborObject : MonoBehaviour
             if (data.NeighborEnum == SelectedNeighbor)
             {
                 usedData = data;
+
+                xpFillValue = usedData.NeighborXp / usedData.MaxXp;
+                level = (int)usedData.NeighborLevel;
+
+                LevelDisplay.text = level.ToString();
+                XpFill.fillAmount = xpFillValue;
+                Name.text = SelectedNeighbor.ToString();
+                RemainingTasksText.text = remainingTasks.ToString();
+
                 maxRemainingTasks = TaskPresets.Count;
                 remainingTasks = maxRemainingTasks - usedData.SolvedTasks;
                 if (remainingTasks < 0)
@@ -61,14 +100,6 @@ public class NeighborObject : MonoBehaviour
                 //Debug.Log("xFill " + xpFillValue);
                 //Debug.Log("xneigh " + usedData.NeighborXp);
                 //Debug.Log("xmax " + usedData.MaxXp);
-
-                xpFillValue = usedData.NeighborXp / usedData.MaxXp;
-                level = (int)usedData.NeighborLevel;
-
-                LevelDisplay.text = level.ToString();
-                XpFill.fillAmount = xpFillValue;
-                Name.text = SelectedNeighbor.ToString();
-                RemainingTasksText.text = remainingTasks.ToString();
 
                 break;
             }

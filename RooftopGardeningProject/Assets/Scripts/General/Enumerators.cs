@@ -63,4 +63,6 @@ public enum PlantType
 public enum Neighbor
 {
     HARALD,
+    MIRA,
+    KITA
 }

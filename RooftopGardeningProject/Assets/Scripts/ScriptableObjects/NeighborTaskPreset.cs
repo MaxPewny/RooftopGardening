@@ -23,5 +23,7 @@ public class NeighborTaskPreset : ScriptableObject
 
     public float RewardedXP;
 
+    public float RewardedXPNeighbor; 
+
     public List<ObjectivePair> Objectives;
 }

@@ -8,9 +8,11 @@ public class TaskObject : MonoBehaviour
     public Text NameDisplay;
     public Text FirstObjectiveText;
     public Text SecondObjectiveText;
+    public Text ThirdObjectiveText;
 
     public Image FirstIcon;
     public Image SecondIcon;
+    public Image ThirdIcon;
 
     public Color AvailableColor;
     public Color NotAvailableColor;
@@ -24,7 +26,29 @@ public class TaskObject : MonoBehaviour
         taskList = TaskList;
         NameDisplay.text = preset.Description;
         SetUI(ref FirstIcon, ref FirstObjectiveText, 0);
-        SetUI(ref SecondIcon, ref SecondObjectiveText, 1);
+        if (preset.Objectives.Count > 1)
+        {
+            SetUI(ref SecondIcon, ref SecondObjectiveText, 1);
+
+            if (preset.Objectives.Count > 2)
+            {
+                SetUI(ref ThirdIcon, ref ThirdObjectiveText, 2);
+            }
+            else
+            {
+                ThirdObjectiveText.gameObject.SetActive(false);
+                ThirdIcon.gameObject.SetActive(false);
+            }
+
+        }
+        else 
+        {
+            SecondObjectiveText.gameObject.SetActive(false);
+            SecondIcon.gameObject.SetActive(false);
+            ThirdObjectiveText.gameObject.SetActive(false);
+            ThirdIcon.gameObject.SetActive(false);
+        }
+
     }
 
     private void SetUI(ref Image Icon, ref Text ObjectiveText, int I) 
@@ -85,7 +109,8 @@ public class TaskObject : MonoBehaviour
         {
             if (data.NeighborEnum == preset.TaskGiver)
             {
-                data.NeighborXp += preset.RewardedXP;
+                data.NeighborXp += preset.RewardedXPNeighbor;
+                GameplayController.Instance.PlayerXp += preset.RewardedXP;
                 data.SolvedTasks++;
             }
         }

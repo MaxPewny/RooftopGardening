@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CarrotPurplePack
   m_EditorClassIdentifier: 
   Type: 5
-  Seed: {fileID: -6714344759670153599, guid: 90a2e0c4735ec8b4d9027316345d3b4c, type: 3}
+  Seed: {fileID: -2997166255556037721, guid: 89c542128b6549e48a4b614538fea15f, type: 3}
   Name: CarrotSeeds

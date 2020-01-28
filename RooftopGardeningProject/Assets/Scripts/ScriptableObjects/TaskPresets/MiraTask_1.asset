@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d72058e8de2af86438c05977958c56c9, type: 3}
-  m_Name: HaraldTask_1
+  m_Name: MiraTask_1
   m_EditorClassIdentifier: 
-  TaskGiver: 0
+  TaskGiver: 1
   RequiredLevel: 0
-  Name: "Gesunde Ern\xE4hrung"
-  Description: "Mein Arzt hat gemeint ich muss mich ges\xFCnder ern\xE4hren. Quacksalber...naja
-    probieren kann man es ja. H\xE4ttest du vielleicht ein Salat f\xFCr mich ?"
-  RewardedXP: 261
+  Name: Von Nachbar zu Nachbar
+  Description: "Harald hat mir von deinem k\xF6stlichen Gem\xFCse erz\xE4hlt. Davon
+    muss ich mich einfach \xFCberzeugen!"
+  RewardedXP: 0
   RewardedXPNeighbor: 0
   Objectives:
   - Type: 1
-    Count: 3
-    Icon: {fileID: 21300000, guid: 1abc46636bada814b9be902534391b11, type: 3}
+    Count: 0
+    Icon: {fileID: 0}
+  - Type: 0
+    Count: 0
+    Icon: {fileID: 0}
+  - Type: 7
+    Count: 0
+    Icon: {fileID: 0}

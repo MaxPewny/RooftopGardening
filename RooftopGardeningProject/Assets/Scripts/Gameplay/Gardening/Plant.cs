@@ -10,11 +10,17 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public int PlantNumber;
 
     public PlantPreset preset;
+    public GameObject FruitPrefab;
+    public GameObject ExtraPrefab;
 
     public GameObject Bug;
     public GameObject PlantDisplay;
-    public GameObject FruitPrefab;
-    public GameObject ExtraPrefab;
+    public GameObject Sign;
+
+    public Sprite WaterSignSprite;
+    public Sprite GrowSignSprite;
+    public Sprite FruitSignSprite;
+
     public List<GameObject> Fruits = new List<GameObject>();
 
     public float BugApperanceTime = 1; // TODO: move to Scriptable Object?
@@ -46,14 +52,20 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     private void Update()
     {
         Check();
+        CheckSign();
     }
 
     public void LoadFromData(PlantData Data, PlantPreset Preset)
     {
         GardenNumber = Data.GardenNumber;
         PlantNumber = Data.SlotNumber;
+        plantLevel = Data.PlantLevel;
+        bugIsThere = Data.BugIsThere;
 
         preset = Preset;
+
+        Sign.SetActive(true);
+        Sign.GetComponent<SpriteRenderer>().sprite = GrowSignSprite;
 
         ChangeSprite(Data.PlantLevel);
         SetFruits(preset.FruitGrowthTime);
@@ -101,6 +113,8 @@ public class Plant : MonoBehaviour, IPointerClickHandler
             if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].PlantLevel != plantLevel)
             {
                 ChangeSprite(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].PlantLevel);
+                Sign.SetActive(true);
+                Sign.GetComponent<SpriteRenderer>().sprite = WaterSignSprite;
             }
             if (!bugIsThere)
             {
@@ -110,6 +124,19 @@ public class Plant : MonoBehaviour, IPointerClickHandler
             {
                 GrowFruit(GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].FruitsCounter);
             }
+        }
+    }
+
+    public void CheckSign() 
+    {
+        if (fruitAmount > 0 && !bugIsThere)
+        {
+            Sign.SetActive(true);
+            Sign.GetComponent<SpriteRenderer>().sprite = FruitSignSprite;
+        }
+        else if (plantLevel == GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].MaxPlantLevel)
+        {
+            Sign.SetActive(false);
         }
     }
 
@@ -189,6 +216,10 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public void WaterPlant()
     {
         GameplayController.Instance.WaterPlant(GardenNumber, PlantNumber, WaterCycleTime);
+        if (Sign.activeSelf)
+        {
+            Sign.GetComponent<SpriteRenderer>().sprite = GrowSignSprite; 
+        }
     }
 
     public void FertilizePlant()
