@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72058e8de2af86438c05977958c56c9, type: 3}
   m_Name: MiraTask_2
   m_EditorClassIdentifier: 
-  TaskGiver: 1
+  TaskGiver: 0
   RequiredLevel: 0
   Name: Geschwisterliebe
-  Description: "Meine Geschwister statten mir einen Besuch ab.Genau die richtige M\xF6glichkeit
-    ihnen meine Kochk\xFCnste zu pr\xE4sentieren"
+  Description: Meine Geschwister statten mir einen Besuch ab.Abends wollen wir kochen
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives:
   - Type: 0
     Count: 0

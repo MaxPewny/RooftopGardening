@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72058e8de2af86438c05977958c56c9, type: 3}
   m_Name: MiraTask_3
   m_EditorClassIdentifier: 
-  TaskGiver: 1
+  TaskGiver: 0
   RequiredLevel: 0
   Name: Auf gute Nachbarschaft
-  Description: "Morgen ist unser Nachabrschaftsfest. W\xE4re doch voll cool wenn wir
-    etwas von deinem Gem\xFCse verwenden um uns alle satt zu kriegen."
+  Description: "Morgen ist unser Nachabrschaftsfest. Lass uns etwas von deinem Gem\xFCse
+    da pr\xE4sentieren"
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives:
   - Type: 2
     Count: 5

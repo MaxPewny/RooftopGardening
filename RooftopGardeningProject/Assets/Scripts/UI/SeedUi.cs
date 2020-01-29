@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using TMPro;
 
 public class SeedUi : MonoBehaviour, IPointerClickHandler
 {
@@ -11,9 +10,7 @@ public class SeedUi : MonoBehaviour, IPointerClickHandler
 
     public Image Icon;
 
-    public TextMeshProUGUI CountText;
-
-    public TextMeshProUGUI NameText;
+    public Text CountText;
 
     SeedMenu menu;
 
@@ -21,7 +18,6 @@ public class SeedUi : MonoBehaviour, IPointerClickHandler
     {
         type = Pack.Type;
         Icon.sprite = Pack.Seed;
-        NameText.text = Pack.Name;
         menu = seedMenu;
 
         foreach (PlantCurrency currency in GameplayController.Instance.PlantCurrencies)

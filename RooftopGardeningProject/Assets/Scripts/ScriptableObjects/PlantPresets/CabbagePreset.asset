@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   MaxLevel: 3
+  IsHerb: 0
   ExtraObjects: []
   PlantObjects:
   - ObjectLevel: 1
@@ -32,8 +33,9 @@ MonoBehaviour:
     Scale: {x: 0.2, y: 0.2, z: 1}
     ColliderSize: {x: 1, y: 1, z: 0.3}
   FruitObjects: []
+  CycleDisappearCount: 3
   BugApperanceTime: 1
   GrowCycleTime: 1
   WaterCycleTime: 1
   FruitGrowthTime: 1
-  MaxFruitCounter: 1
+  MaxFruitCounter: 0

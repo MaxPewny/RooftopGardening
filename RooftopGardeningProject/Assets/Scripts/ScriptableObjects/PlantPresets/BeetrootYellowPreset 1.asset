@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2846b72c8294a340a659bb7fea0e53b, type: 3}
+  m_Name: BeetrootYellowPreset 1
+  m_EditorClassIdentifier: 
+  Type: 7
+  MaxLevel: 3
+  IsHerb: 0
+  ExtraObjects: []
+  PlantObjects: []
+  FruitObjects: []
+  CycleDisappearCount: 3
+  BugApperanceTime: 1
+  GrowCycleTime: 1
+  WaterCycleTime: 1
+  FruitGrowthTime: 1
+  MaxFruitCounter: 0

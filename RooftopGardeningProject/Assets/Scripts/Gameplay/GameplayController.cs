@@ -288,6 +288,7 @@ public class GameplayController : Singleton<GameplayController>
                     data.FruitsCounter = 0;
 
                     data.BugIsThere = false;
+                    data.WasCut = false;
 
                     data.GrowCycleTime = 0;
 

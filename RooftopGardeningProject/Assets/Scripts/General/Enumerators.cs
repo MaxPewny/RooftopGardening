@@ -56,6 +56,8 @@ public enum PlantType
     CUCUMBER,
     TOMATO_OXHEART,
     CARROT_PURPLE,
+    BEETROOT,
+    BEETROOT_YELLOW,
     BASIL,
     CHIVES
 }

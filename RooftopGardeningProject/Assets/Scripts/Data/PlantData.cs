@@ -20,8 +20,10 @@ public class PlantData
 
     public int MaxFruitCounter;
     public int FruitsCounter;
+    public int CycleDisappearCount;
 
     public bool BugIsThere = false;
+    public bool WasCut = false;
 
     //public int MaxBugCounter;
     //public int BugCounter;

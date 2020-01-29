@@ -15,10 +15,8 @@ MonoBehaviour:
   TaskGiver: 0
   RequiredLevel: 0
   Name: Auf den Geschmack gekommen
-  Description: Du..der Salat von letzten war schon lecker. Will da nochmal einen anderen
-    probieren
+  Description: 'Du...der Salat von letztens war echt lecker. '
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives:
   - Type: 0
     Count: 4

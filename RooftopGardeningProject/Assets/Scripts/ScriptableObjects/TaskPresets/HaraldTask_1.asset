@@ -15,10 +15,8 @@ MonoBehaviour:
   TaskGiver: 0
   RequiredLevel: 0
   Name: "Gesunde Ern\xE4hrung"
-  Description: "Mein Arzt hat gemeint ich muss mich ges\xFCnder ern\xE4hren. Quacksalber...naja
-    probieren kann man es ja. H\xE4ttest du vielleicht ein Salat f\xFCr mich ?"
-  RewardedXP: 261
-  RewardedXPNeighbor: 0
+  Description: "Mein Arzt hat gemeint ich muss mich ges\xFCnder ern\xE4hren. "
+  RewardedXP: 244
   Objectives:
   - Type: 1
     Count: 3

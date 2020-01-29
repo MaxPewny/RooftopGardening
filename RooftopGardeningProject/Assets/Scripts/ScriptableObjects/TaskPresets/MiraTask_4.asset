@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72058e8de2af86438c05977958c56c9, type: 3}
   m_Name: MiraTask_4
   m_EditorClassIdentifier: 
-  TaskGiver: 1
+  TaskGiver: 0
   RequiredLevel: 0
   Name: Suuuper leckeres Rezept
-  Description: Mir wurde ein neues Rezept empfohlen. Ich muss es einfach probieren
-    am besten heute noch
+  Description: Mir wurde ein neues Rezept empfohlen. Ich muss es einfach ausprobieren.
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives: []

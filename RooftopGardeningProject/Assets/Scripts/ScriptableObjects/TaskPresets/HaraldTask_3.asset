@@ -15,10 +15,8 @@ MonoBehaviour:
   TaskGiver: 0
   RequiredLevel: 0
   Name: "F\xFCr Gudrun"
-  Description: "Ich m\xF6chte meine Gudrun \xFCberraschen. Hab gedacht ich koch was
-    gutes f\xFCr sie."
+  Description: "Ich m\xF6chte meine Gudrun \xFCberraschen. Dachte ich koch was Gutes."
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives:
   - Type: 6
     Count: 1

@@ -14,11 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 4
   MaxLevel: 3
-  ExtraObjects: []
-  PlantObjects: []
-  FruitObjects: []
+  IsHerb: 0
+  ExtraObjects:
+  - ObjectLevel: 0
+    UsedSprite: {fileID: 21300000, guid: 5a7a7561e42a8fd4ab491738a277a763, type: 3}
+    Position: {x: 0, y: 0, z: 1}
+    Scale: {x: 1.2, y: 1.2, z: 1.2}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  PlantObjects:
+  - ObjectLevel: 1
+    UsedSprite: {fileID: 21300000, guid: f8b8ca19cfbba7f4ba86bf7324c455be, type: 3}
+    Position: {x: 0, y: -0.2, z: 0}
+    Scale: {x: 0.4, y: 0.4, z: 0.4}
+    ColliderSize: {x: 1, y: 1, z: 0.2}
+  - ObjectLevel: 2
+    UsedSprite: {fileID: 21300000, guid: 0f101556a238b4045835a313554cb349, type: 3}
+    Position: {x: 0, y: 0.5, z: 0}
+    Scale: {x: 0.5, y: 0.5, z: 0.5}
+    ColliderSize: {x: 3, y: 6, z: 0.2}
+  - ObjectLevel: 3
+    UsedSprite: {fileID: 21300000, guid: 76412428c30e4564badf2a463eeb0a79, type: 3}
+    Position: {x: 0, y: 1, z: 0}
+    Scale: {x: 0.7, y: 0.7, z: 0.7}
+    ColliderSize: {x: 2, y: 6, z: 0.2}
+  FruitObjects:
+  - RipeSprite: {fileID: 21300000, guid: c065e96671857c744810795e5161713c, type: 3}
+    UnripeSprite: {fileID: 0}
+    Position: {x: 0.8, y: 1.75, z: -1}
+    Scale: {x: 0.15, y: 0.15, z: 0.15}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - RipeSprite: {fileID: 21300000, guid: c065e96671857c744810795e5161713c, type: 3}
+    UnripeSprite: {fileID: 0}
+    Position: {x: 1, y: 4, z: -1}
+    Scale: {x: 0.15, y: 0.15, z: 0.15}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  CycleDisappearCount: 4
   BugApperanceTime: 1
   GrowCycleTime: 1
   WaterCycleTime: 1
   FruitGrowthTime: 1
-  MaxFruitCounter: 0
+  MaxFruitCounter: 2

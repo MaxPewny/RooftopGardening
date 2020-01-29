@@ -33,6 +33,8 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     private bool hasFruits = false;
     private bool isRipe = false;
     private bool dataSet = false;
+    private bool isHerb = false;
+    private bool wasCut = false;
 
     private void Awake()
     {
@@ -72,6 +74,8 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         SetExtras();
         GrowFruit(Data.FruitsCounter);
         BugAppearance(Data.BugIsThere);
+        isHerb = preset.IsHerb;
+        wasCut = Data.WasCut;
 
         dataSet = true;
     }
@@ -86,6 +90,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         BugApperanceTime = Preset.BugApperanceTime;
         GrowCycleTime = Preset.GrowCycleTime;
         WaterCycleTime = Preset.WaterCycleTime;
+        isHerb = preset.IsHerb;
 
         Data.PlantLevel = Level.LEVEL_1;
         Data.MaxPlantLevel = preset.MaxLevel;
@@ -93,6 +98,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         Data.Type = Preset.Type;
         Data.GrowCycleTime = Preset.GrowCycleTime;
         Data.MaxFruitCounter = Preset.MaxFruitCounter;
+        Data.CycleDisappearCount = Preset.CycleDisappearCount;
         Data.NextBugDate = Preset.StartBugDate;
         Data.NextGrowthDate = Preset.StartGrowthDate;
         Data.NextWaterDate = Preset.StartWaterDate;
@@ -156,10 +162,20 @@ public class Plant : MonoBehaviour, IPointerClickHandler
             case Level.LEVEL_0: 
                 break;
             case Level.LEVEL_1:
-                PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[0].UsedSprite;
-                PlantDisplay.transform.localPosition = preset.PlantObjects[0].Position;
-                PlantDisplay.transform.localScale = preset.PlantObjects[0].Scale;
-                gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[0].ColliderSize;
+                if (wasCut)
+                {
+                    PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[4].UsedSprite;
+                    PlantDisplay.transform.localPosition = preset.PlantObjects[4].Position;
+                    PlantDisplay.transform.localScale = preset.PlantObjects[4].Scale;
+                    gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[4].ColliderSize;
+                }
+                else 
+                {
+                    PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[0].UsedSprite;
+                    PlantDisplay.transform.localPosition = preset.PlantObjects[0].Position;
+                    PlantDisplay.transform.localScale = preset.PlantObjects[0].Scale;
+                    gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[0].ColliderSize;
+                }
                 break;
             case Level.LEVEL_2:
                 PlantDisplay.gameObject.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[1].UsedSprite;
@@ -241,6 +257,11 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     {
         GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
         --fruitAmount;
+        GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].CycleDisappearCount--;
+        if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].CycleDisappearCount <= 0)
+        {
+            GetComponentInParent<GardenSlot>().ResetPlantSlot();
+        }
     }
 
     public void BugAppearance(bool BugIsThere)
@@ -280,10 +301,31 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("hi");
-        if (!hasFruits && isRipe)
+        if (!isHerb)
         {
+            if (!hasFruits && isRipe)
+            {
+                GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
+                GetComponentInParent<GardenSlot>().ResetPlantSlot();
+            }
+        }
+    }
+
+    public void CutHerb() 
+    {
+        if (isHerb && isRipe)
+        {
+            wasCut = true;
             GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
-            GetComponentInParent<GardenSlot>().ResetPlantSlot();
+            GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].CycleDisappearCount--;
+            if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].CycleDisappearCount <= 0)
+            {
+                GetComponentInParent<GardenSlot>().ResetPlantSlot();
+                return;
+            }
+            GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].PlantLevel = Level.LEVEL_1;
+            ChangeSprite(Level.LEVEL_1);
+            
         }
     }
 

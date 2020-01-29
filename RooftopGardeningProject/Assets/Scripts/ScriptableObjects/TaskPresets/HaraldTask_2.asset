@@ -15,10 +15,9 @@ MonoBehaviour:
   TaskGiver: 0
   RequiredLevel: 0
   Name: Enkel zu Besuch
-  Description: "Mein s\xFC\xDFer Enkel besucht mich. Der Bub ben\xF6tigt was ordentlich
-    zu essen, deswegen kochen wir zusammen. "
+  Description: "Mein s\xFC\xDFer Enkel besucht mich. Der Bub muss was Ordentliches
+    essen."
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives:
   - Type: 2
     Count: 2

@@ -15,10 +15,9 @@ MonoBehaviour:
   TaskGiver: 0
   RequiredLevel: 0
   Name: "M\xE4nnerabend"
-  Description: "Meine Bagage und ich treffe uns zum w\xF6chentlichen Skatabend. Dacht
-    wir nehmen etwas Gem\xFCse als Knabberkram."
+  Description: "Meine Bagage und ich treffe uns zum Skate. Dachte wir knabbern etwas
+    Gem\xFCse mit."
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives:
   - Type: 5
     Count: 0

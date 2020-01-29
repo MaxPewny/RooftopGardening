@@ -29,11 +29,13 @@ public class PlantPreset : ScriptableObject
 
     public PlantType Type;
     public Level MaxLevel;
+    public bool IsHerb;
 
     public List<PlantObject> ExtraObjects;
     public List<PlantObject> PlantObjects;
     public List<FruitObject> FruitObjects;
 
+    public int CycleDisappearCount = 3;
     public float BugApperanceTime = 1;
     public float GrowCycleTime = 1;
     public float WaterCycleTime = 1;

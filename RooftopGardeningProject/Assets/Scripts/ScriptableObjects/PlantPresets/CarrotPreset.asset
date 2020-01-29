@@ -15,7 +15,22 @@ MonoBehaviour:
   Type: 2
   MaxLevel: 3
   ExtraObjects: []
-  PlantObjects: []
+  PlantObjects:
+  - ObjectLevel: 1
+    UsedSprite: {fileID: 21300000, guid: 82307e9d75c71e64193ac8d32cc74606, type: 3}
+    Position: {x: 0.2, y: -0.4, z: 0}
+    Scale: {x: 0.4, y: 0.4, z: 0.4}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - ObjectLevel: 2
+    UsedSprite: {fileID: 21300000, guid: fac048dd5c481ac4ea5574e7f92d6a43, type: 3}
+    Position: {x: 0.2, y: 0.2, z: 0}
+    Scale: {x: 0.3, y: 0.3, z: 0.3}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - ObjectLevel: 3
+    UsedSprite: {fileID: 21300000, guid: 895d8282b221bd446aaf812828349d12, type: 3}
+    Position: {x: 0.2, y: -0.1, z: 0}
+    Scale: {x: 0.5, y: 0.5, z: 0.5}
+    ColliderSize: {x: 0, y: 0, z: 0}
   FruitObjects: []
   BugApperanceTime: 1
   GrowCycleTime: 1

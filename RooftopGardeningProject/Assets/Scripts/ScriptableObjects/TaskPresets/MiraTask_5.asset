@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72058e8de2af86438c05977958c56c9, type: 3}
   m_Name: MiraTask_5
   m_EditorClassIdentifier: 
-  TaskGiver: 1
+  TaskGiver: 0
   RequiredLevel: 0
   Name: "Gr\xFCne Erkenntnis"
-  Description: "Seit ich so viel Gem\xFCse esse, gehts mir richtig gut. Deswegen will
-    ich meine Ern\xE4hrung jetzt umstellen. Hilfst du mir dabei"
+  Description: "Ich will ich meine Ern\xE4hrung umstellen. Hilfst du mir dabei"
   RewardedXP: 0
-  RewardedXPNeighbor: 0
   Objectives: []
