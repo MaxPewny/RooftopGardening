@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Weed : MonoBehaviour, IDragHandler, IEndDragHandler
 {
+    public List<Sprite> WeedSprites;
+
     [SerializeField]
     private float swipeDistanceY = 1, swipeOffsetX = 1;
 
@@ -12,6 +14,8 @@ public class Weed : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private void Start()
     {
+        GetComponent<SpriteRenderer>().sprite = WeedSprites[Random.Range(0, WeedSprites.Count)];
+
         originalPosition = transform.position;
         //gameObject.SetActive(false);
     }

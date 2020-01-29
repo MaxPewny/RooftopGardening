@@ -164,10 +164,10 @@ public class Plant : MonoBehaviour, IPointerClickHandler
             case Level.LEVEL_1:
                 if (wasCut)
                 {
-                    PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[4].UsedSprite;
-                    PlantDisplay.transform.localPosition = preset.PlantObjects[4].Position;
-                    PlantDisplay.transform.localScale = preset.PlantObjects[4].Scale;
-                    gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[4].ColliderSize;
+                    PlantDisplay.GetComponent<SpriteRenderer>().sprite = preset.PlantObjects[3].UsedSprite;
+                    PlantDisplay.transform.localPosition = preset.PlantObjects[3].Position;
+                    PlantDisplay.transform.localScale = preset.PlantObjects[3].Scale;
+                    gameObject.GetComponent<BoxCollider>().size = preset.PlantObjects[3].ColliderSize;
                 }
                 else 
                 {

@@ -25,6 +25,9 @@ public class Bug : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log("click");
         removeTapCount--;
+#if UNITY_ANDROID
+        Handheld.Vibrate();
+#endif
         if (removeTapCount <= 0)
         {
             transform.GetComponentInParent<Plant>().BugRemoved();

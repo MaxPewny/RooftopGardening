@@ -31,7 +31,7 @@ public class HerbScissors : MonoBehaviour, IDragHandler, IEndDragHandler
             Debug.Log(hitInfo.transform.name);
             if (hitInfo.transform.tag == "Plant")
             {
-                //hitInfo.transform.gameObject.GetComponent<Plant>().;
+                hitInfo.transform.gameObject.GetComponent<Plant>().CutHerb();
             }
         }
         transform.SetParent(originalParent);
