@@ -7,12 +7,17 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject MovingCanvas;
     private Transform originalParent;
+    private RectTransform rectTransform;
+    private float timeOfTravel = 5; //time after object reach a target place 
+    private float currentTime = 0;
+    private float normalizedValue;
 
     public LayerMask RaycastLayerMask = 1;
 
     void Start()
     {
         originalParent = transform.parent;
+        rectTransform = gameObject.GetComponent<RectTransform>();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -28,15 +33,41 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
 
             if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
             {
-                Debug.Log(hitInfo.transform.name);
-                if (hitInfo.transform.tag == "Plant")
-                {
-                    Debug.Log("Watering Plant");
-                    hitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
-                }
+                WaterPlant(hitInfo, eventData);
+                transform.SetParent(MovingCanvas.transform, true);
             }
+            else
+            {
+                transform.SetParent(originalParent);
+                rectTransform.offsetMax = Vector2.zero;
+                rectTransform.offsetMin = Vector2.zero;
+            }
+    }
+
+    public void WaterPlant(RaycastHit HitInfo, PointerEventData EventData) 
+    {
+        Debug.Log(HitInfo.transform.name);
+        if (HitInfo.transform.tag == "Plant")
+        {
+            StartCoroutine(LerpObject(EventData));
+            Debug.Log("Watering Plant");
+            HitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
+        }
+    }
+
+    IEnumerator LerpObject(PointerEventData PointerEventData)
+    {
+
+        while (Time.deltaTime <= timeOfTravel)
+        {
+            currentTime += Time.deltaTime;
+            normalizedValue = currentTime / timeOfTravel; // we normalize our time 
+
+            rectTransform.position = Vector2.Lerp(PointerEventData.position, PointerEventData.position + new Vector2(rectTransform.rect.width / 2, rectTransform.rect.height / 2), normalizedValue);
+            yield return null;
+        }
         transform.SetParent(originalParent);
-        transform.gameObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;
-        transform.gameObject.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+        rectTransform.offsetMax = Vector2.zero;
+        rectTransform.offsetMin = Vector2.zero;
     }
 }

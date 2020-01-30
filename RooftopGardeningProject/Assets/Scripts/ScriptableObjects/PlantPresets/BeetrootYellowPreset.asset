@@ -16,7 +16,22 @@ MonoBehaviour:
   MaxLevel: 3
   IsHerb: 0
   ExtraObjects: []
-  PlantObjects: []
+  PlantObjects:
+  - ObjectLevel: 0
+    UsedSprite: {fileID: 21300000, guid: 8dc326ecc941e3c4b8c7100a8618c8b5, type: 3}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - ObjectLevel: 0
+    UsedSprite: {fileID: 21300000, guid: a50fdcb1ae5e81643b09fefea7ba95a9, type: 3}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
+  - ObjectLevel: 0
+    UsedSprite: {fileID: 21300000, guid: 0042573403225874f8677a0f56b6d2f1, type: 3}
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0, y: 0, z: 0}
   FruitObjects: []
   CycleDisappearCount: 3
   BugApperanceTime: 1

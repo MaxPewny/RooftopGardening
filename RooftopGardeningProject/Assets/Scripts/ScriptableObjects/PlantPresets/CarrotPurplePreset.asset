@@ -14,24 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 5
   MaxLevel: 3
+  IsHerb: 0
   ExtraObjects: []
   PlantObjects:
   - ObjectLevel: 1
     UsedSprite: {fileID: 21300000, guid: 82307e9d75c71e64193ac8d32cc74606, type: 3}
-    Position: {x: 0.2, y: -0.4, z: 0}
-    Scale: {x: 0.4, y: 0.4, z: 0.4}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    Position: {x: -0.1, y: -0.4, z: 1}
+    Scale: {x: 0.5, y: 0.5, z: 0.5}
+    ColliderSize: {x: 0.5, y: 0.5, z: 0.3}
   - ObjectLevel: 2
     UsedSprite: {fileID: 21300000, guid: fac048dd5c481ac4ea5574e7f92d6a43, type: 3}
-    Position: {x: 0.2, y: 0.2, z: 0}
+    Position: {x: -0.1, y: 0.2, z: 1}
     Scale: {x: 0.3, y: 0.3, z: 0.3}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 0.5, y: 1.5, z: 0.3}
   - ObjectLevel: 3
     UsedSprite: {fileID: 21300000, guid: e0c53fc92d4f40e468182599e1a14ac7, type: 3}
-    Position: {x: 0.2, y: -0.1, z: 0}
-    Scale: {x: 0.5, y: 0.5, z: 0.5}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    Position: {x: -0.1, y: 0, z: 1}
+    Scale: {x: 0.6, y: 0.6, z: 0.6}
+    ColliderSize: {x: 0.5, y: 3, z: 0.5}
   FruitObjects: []
+  CycleDisappearCount: 3
   BugApperanceTime: 1
   GrowCycleTime: 1
   WaterCycleTime: 1

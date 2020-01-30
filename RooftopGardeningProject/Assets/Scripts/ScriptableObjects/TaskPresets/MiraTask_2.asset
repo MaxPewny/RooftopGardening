@@ -16,15 +16,15 @@ MonoBehaviour:
   RequiredLevel: 0
   Name: Geschwisterliebe
   Description: Meine Geschwister statten mir einen Besuch ab.Abends wollen wir kochen
-  RewardedXP: 0
-  RewardedXPNeighbor: 0
+  RewardedXP: 452
+  RewardedXPNeighbor: 4
   Objectives:
-  - Type: 0
-    Count: 0
-    Icon: {fileID: 0}
-  - Type: 0
-    Count: 0
-    Icon: {fileID: 0}
-  - Type: 0
-    Count: 0
-    Icon: {fileID: 0}
+  - Type: 4
+    Count: 2
+    Icon: {fileID: 21300000, guid: c065e96671857c744810795e5161713c, type: 3}
+  - Type: 5
+    Count: 2
+    Icon: {fileID: 21300000, guid: 551fd1cdaa4fb324ea6a59a4db5ee421, type: 3}
+  - Type: 8
+    Count: 1
+    Icon: {fileID: 21300000, guid: 4b50fc4325bc7a94d959daa80129de8a, type: 3}

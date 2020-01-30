@@ -16,15 +16,15 @@ MonoBehaviour:
   RequiredLevel: 0
   Name: Von Nachbar zu Nachbar
   Description: "Harald hat mir von deinem k\xF6stlichen Gem\xFCse erz\xE4hlt."
-  RewardedXP: 0
-  RewardedXPNeighbor: 0
+  RewardedXP: 363
+  RewardedXPNeighbor: 2
   Objectives:
   - Type: 1
-    Count: 0
-    Icon: {fileID: 0}
+    Count: 1
+    Icon: {fileID: 21300000, guid: 1abc46636bada814b9be902534391b11, type: 3}
   - Type: 0
-    Count: 0
-    Icon: {fileID: 0}
-  - Type: 7
-    Count: 0
-    Icon: {fileID: 0}
+    Count: 4
+    Icon: {fileID: 21300000, guid: 3c075104a46a22046834e94a9ce1e5d8, type: 3}
+  - Type: 6
+    Count: 2
+    Icon: {fileID: 21300000, guid: ce04c7004d31b27488a00e6e362c8f34, type: 3}

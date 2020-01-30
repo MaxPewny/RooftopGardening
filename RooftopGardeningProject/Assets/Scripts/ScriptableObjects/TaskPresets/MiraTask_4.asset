@@ -16,6 +16,9 @@ MonoBehaviour:
   RequiredLevel: 0
   Name: Suuuper leckeres Rezept
   Description: Mir wurde ein neues Rezept empfohlen. Ich muss es einfach ausprobieren.
-  RewardedXP: 0
-  RewardedXPNeighbor: 0
-  Objectives: []
+  RewardedXP: 196
+  RewardedXPNeighbor: 1
+  Objectives:
+  - Type: 2
+    Count: 6
+    Icon: {fileID: 21300000, guid: 87945c9fea0c8ed42b829e5ce44568a4, type: 3}

@@ -16,6 +16,12 @@ MonoBehaviour:
   RequiredLevel: 0
   Name: "Gr\xFCne Erkenntnis"
   Description: "Ich will ich meine Ern\xE4hrung umstellen. Hilfst du mir dabei"
-  RewardedXP: 0
-  RewardedXPNeighbor: 0
-  Objectives: []
+  RewardedXP: 347
+  RewardedXPNeighbor: 2
+  Objectives:
+  - Type: 3
+    Count: 2
+    Icon: {fileID: 21300000, guid: 7dde872316a83a9488f13183117edde9, type: 3}
+  - Type: 0
+    Count: 6
+    Icon: {fileID: 21300000, guid: 3c075104a46a22046834e94a9ce1e5d8, type: 3}

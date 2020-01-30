@@ -57,6 +57,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5e82e840a9f55d47a69d8197addc94d, type: 2}
   - {fileID: 11400000, guid: d2af0425196a8d3408e39d45686ed00c, type: 2}
   - {fileID: 11400000, guid: b9ce29f5f530d354ab90e9d2ca963f0d, type: 2}
+  - {fileID: 11400000, guid: c34a0af734a026742926e3e3775f9aac, type: 2}
+  - {fileID: 11400000, guid: 9145b7bea8fd5de4bae8f36991235326, type: 2}
   Plant: {fileID: 0}
 --- !u!65 &4969193485523686599
 BoxCollider:
@@ -354,6 +356,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5e82e840a9f55d47a69d8197addc94d, type: 2}
   - {fileID: 11400000, guid: d2af0425196a8d3408e39d45686ed00c, type: 2}
   - {fileID: 11400000, guid: b9ce29f5f530d354ab90e9d2ca963f0d, type: 2}
+  - {fileID: 11400000, guid: c34a0af734a026742926e3e3775f9aac, type: 2}
+  - {fileID: 11400000, guid: 9145b7bea8fd5de4bae8f36991235326, type: 2}
   Plant: {fileID: 0}
 --- !u!65 &402348569229109178
 BoxCollider:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2846b72c8294a340a659bb7fea0e53b, type: 3}
   m_Name: BasilPreset
   m_EditorClassIdentifier: 
-  Type: 6
+  Type: 8
   MaxLevel: 3
   IsHerb: 1
   ExtraObjects: []
@@ -21,22 +21,22 @@ MonoBehaviour:
     UsedSprite: {fileID: 21300000, guid: d12c8ba4b6821484ca4d0e55bbd9f205, type: 3}
     Position: {x: 0.2, y: 0, z: 0}
     Scale: {x: 0.5, y: 0.5, z: 0.5}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 2, y: 0.5, z: 0.3}
   - ObjectLevel: 2
     UsedSprite: {fileID: 21300000, guid: 4abe67a141e73d640af2a0572b6c6eab, type: 3}
     Position: {x: 0.2, y: 0, z: 0}
     Scale: {x: 0.5, y: 0.5, z: 0.5}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 2, y: 0.7, z: 0.3}
   - ObjectLevel: 3
     UsedSprite: {fileID: 21300000, guid: ab9125bf670b82249962471ba996f544, type: 3}
     Position: {x: 0.2, y: 0.3, z: 0}
     Scale: {x: 0.5, y: 0.5, z: 0.5}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 2, y: 2, z: 0.3}
   - ObjectLevel: 4
     UsedSprite: {fileID: 21300000, guid: a447ce215e85d434f9ce24fc87e238fc, type: 3}
-    Position: {x: 0.4, y: 0, z: 0}
+    Position: {x: 0.4, y: 0, z: 0.2}
     Scale: {x: 0.4, y: 0.4, z: 0.4}
-    ColliderSize: {x: 0, y: 0, z: 0}
+    ColliderSize: {x: 2, y: 0.5, z: 0.3}
   FruitObjects: []
   CycleDisappearCount: 3
   BugApperanceTime: 1

@@ -17,14 +17,15 @@ MonoBehaviour:
   Name: "M\xE4nnerabend"
   Description: "Meine Bagage und ich treffe uns zum Skate. Dachte wir knabbern etwas
     Gem\xFCse mit."
-  RewardedXP: 0
+  RewardedXP: 269
+  RewardedXPNeighbor: 3
   Objectives:
   - Type: 5
-    Count: 0
-    Icon: {fileID: 0}
+    Count: 2
+    Icon: {fileID: 21300000, guid: 551fd1cdaa4fb324ea6a59a4db5ee421, type: 3}
   - Type: 0
-    Count: 0
-    Icon: {fileID: 0}
+    Count: 6
+    Icon: {fileID: 21300000, guid: 3c075104a46a22046834e94a9ce1e5d8, type: 3}
   - Type: 2
-    Count: 0
-    Icon: {fileID: 0}
+    Count: 4
+    Icon: {fileID: 21300000, guid: 87945c9fea0c8ed42b829e5ce44568a4, type: 3}

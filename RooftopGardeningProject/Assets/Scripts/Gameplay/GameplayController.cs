@@ -17,6 +17,8 @@ public class GameplayController : Singleton<GameplayController>
 
     public List<List<PlantData>> PlantDatas = new List<List<PlantData>>();
 
+    public List<String> FavoritedRecipes = new List<string>();
+
     //public List<FruitData> FruitDatas = new List<FruitData>();
 
     public string CurrentSceneName;
@@ -139,7 +141,7 @@ public class GameplayController : Singleton<GameplayController>
 
         if (DateTime.Now >= DateTime.Parse(UsedData.NextWeedGrowthDate))
         {
-            UsedData.WeedCounter += UnityEngine.Random.Range(0, 4);
+            UsedData.WeedCounter += UnityEngine.Random.Range(0, 2);
             if (UsedData.WeedCounter > UsedData.MaxWeedCounter)
             {
                 UsedData.WeedCounter = UsedData.MaxWeedCounter;

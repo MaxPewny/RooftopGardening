@@ -17,11 +17,12 @@ MonoBehaviour:
   Name: Enkel zu Besuch
   Description: "Mein s\xFC\xDFer Enkel besucht mich. Der Bub muss was Ordentliches
     essen."
-  RewardedXP: 0
+  RewardedXP: 289
+  RewardedXPNeighbor: 2
   Objectives:
   - Type: 2
-    Count: 2
-    Icon: {fileID: 0}
+    Count: 4
+    Icon: {fileID: 21300000, guid: 87945c9fea0c8ed42b829e5ce44568a4, type: 3}
   - Type: 4
-    Count: 3
-    Icon: {fileID: 0}
+    Count: 2
+    Icon: {fileID: 21300000, guid: c065e96671857c744810795e5161713c, type: 3}

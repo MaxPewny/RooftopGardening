@@ -30,6 +30,7 @@ public class Weed : MonoBehaviour, IDragHandler, IEndDragHandler
 
             //transform.GetComponentInParent<Plant>().WeedRemoved();
             gameObject.SetActive(false);
+            GameplayController.Instance.GardenDatas[GetComponentInParent<Garden>().GardenNumber].WeedCounter--;
         }
         else if(transform.position.x > originalPosition.x + swipeOffsetX || transform.position.x < originalPosition.x - swipeOffsetX) 
         {

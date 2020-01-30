@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc994961feec5444c9771586a41bbbc1, type: 3}
   m_Name: BasilPack
   m_EditorClassIdentifier: 
-  Type: 6
+  Type: 8
   Seed: {fileID: 3150496287148599502, guid: 89c542128b6549e48a4b614538fea15f, type: 3}
   Name: BasilSeeds

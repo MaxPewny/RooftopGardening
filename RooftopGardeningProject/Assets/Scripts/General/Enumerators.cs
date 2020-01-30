@@ -68,3 +68,12 @@ public enum Neighbor
     MIRA,
     KITA
 }
+
+public enum RecipeType 
+{
+    STARTER,
+    MAIN_COURSE,
+    DESSERT,
+    FAVOURITE,
+    NONE
+}
