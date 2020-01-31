@@ -34,14 +34,12 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
             if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
             {
                 WaterPlant(hitInfo, eventData);
-                transform.SetParent(MovingCanvas.transform, true);
+                //transform.SetParent(MovingCanvas.transform, true);
             }
-            else
-            {
-                transform.SetParent(originalParent);
-                rectTransform.offsetMax = Vector2.zero;
-                rectTransform.offsetMin = Vector2.zero;
-            }
+
+            transform.SetParent(originalParent);
+            rectTransform.offsetMax = Vector2.zero;
+            rectTransform.offsetMin = Vector2.zero;
     }
 
     public void WaterPlant(RaycastHit HitInfo, PointerEventData EventData) 
@@ -49,9 +47,10 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
         Debug.Log(HitInfo.transform.name);
         if (HitInfo.transform.tag == "Plant")
         {
-            StartCoroutine(LerpObject(EventData));
+            //StartCoroutine(LerpObject(EventData));
             Debug.Log("Watering Plant");
             HitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
+            GetComponentInChildren<Animator>().Play("WaterAnim");
         }
     }
 

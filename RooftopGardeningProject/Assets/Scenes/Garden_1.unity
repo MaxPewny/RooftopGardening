@@ -700,6 +700,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 757039191339314431, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884602782799608, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.499072
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884603265186374, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5984884603564467441, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -714,6 +729,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884601722058571, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1801490274}
+    - target: {fileID: 5984884602588738596, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1801490274}
+    - target: {fileID: 5984884603299338693, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1801490274}
+    - target: {fileID: 5984884602890145172, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 5984884603337150819, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -730,37 +765,77 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5984884602588738596, guid: 1b486316e520f5e499fabba1eb11abcc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1801490274}
-    - target: {fileID: 5984884601722058571, guid: 1b486316e520f5e499fabba1eb11abcc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1801490274}
-    - target: {fileID: 5984884603299338693, guid: 1b486316e520f5e499fabba1eb11abcc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1801490274}
-    - target: {fileID: 5984884602890145172, guid: 1b486316e520f5e499fabba1eb11abcc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000015258789
-      objectReference: {fileID: 0}
-    - target: {fileID: 757039191339314431, guid: 1b486316e520f5e499fabba1eb11abcc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5984884603749826316, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6b15faefa0d4c8e4da957563f2a20f65,
         type: 3}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813815671639530896, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243105300201456108, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b486316e520f5e499fabba1eb11abcc, type: 3}
 --- !u!1001 &7965954155794367168
