@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     public GameObject NeighborList;
     public GameObject TaskList;
     public GameObject RecipeList;
+    public GameObject InventoryList;
 
     private GameObject activeMenu;
 
@@ -33,6 +34,12 @@ public class MenuManager : MonoBehaviour
         activeMenu.SetActive(false);
         RecipeList.SetActive(true);
         SetActiveMenu(RecipeList);
+    }
+    public void ShowInventory()
+    {
+        activeMenu.SetActive(false);
+        InventoryList.SetActive(true);
+        SetActiveMenu(InventoryList);
     }
 
     public void SetActiveMenu(GameObject ActiveMenu) 

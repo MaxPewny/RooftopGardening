@@ -5,7 +5,13 @@ using UnityEngine.EventSystems;
 
 public class Bug : MonoBehaviour, IPointerClickHandler
 {
+    public Sprite BugSprite;
+    public Sprite SnailSprite;
+
     public GameObject bugExpelVfx;
+    public GameObject snailExpelVfx;
+
+    private GameObject vfx;
 
     public int RemoveTapAmount = 10;
     private int removeTapCount = 0;
@@ -14,6 +20,17 @@ public class Bug : MonoBehaviour, IPointerClickHandler
     {
         removeTapCount = RemoveTapAmount;
         gameObject.SetActive(false);
+
+        if (Random.Range(0,2) > 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = BugSprite;
+            vfx = bugExpelVfx;
+        }
+        else 
+        {
+            GetComponent<SpriteRenderer>().sprite = SnailSprite;
+            vfx = snailExpelVfx;
+        }
     }
 
     private void OnEnable()
@@ -31,7 +48,7 @@ public class Bug : MonoBehaviour, IPointerClickHandler
         if (removeTapCount <= 0)
         {
             transform.GetComponentInParent<Plant>().BugRemoved();
-            Instantiate(bugExpelVfx, transform.position, transform.rotation);
+            Instantiate(vfx, transform.position, transform.rotation);
             gameObject.SetActive(false);
         }
     }

@@ -94,7 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc868431072d83640a1b8b1a4441a316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bugExpelVfx: {fileID: 4190620289610641116, guid: 8d10367cac43e0549846ea037fba7896,
+  BugSprite: {fileID: 21300000, guid: 179e323e3ea580e40b33df37a498bdf1, type: 3}
+  SnailSprite: {fileID: 21300000, guid: 575829b4a28c5904a9d4bc612b5906a2, type: 3}
+  bugExpelVfx: {fileID: 940755664023758218, guid: 8d10367cac43e0549846ea037fba7896,
+    type: 3}
+  snailExpelVfx: {fileID: 4490280429385563379, guid: b6b1e01e4af92bb468d6ec749f222693,
     type: 3}
   RemoveTapAmount: 10
 --- !u!61 &7215333566886410689
@@ -114,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.869999, y: 15.324296}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 4.89, y: 7.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
