@@ -29,17 +29,19 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         RaycastHit hitInfo;
-            Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
-            if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
-            {
-                WaterPlant(hitInfo, eventData);
-                //transform.SetParent(MovingCanvas.transform, true);
-            }
+        if (Physics.Raycast(ray, out hitInfo, 1000, RaycastLayerMask))
+        {
+            WaterPlant(hitInfo, eventData);
+            //transform.SetParent(MovingCanvas.transform, true);
+        }
+        else 
+        {
+            SnapWaterCan();
+        }
 
-            transform.SetParent(originalParent);
-            rectTransform.offsetMax = Vector2.zero;
-            rectTransform.offsetMin = Vector2.zero;
+            
     }
 
     public void WaterPlant(RaycastHit HitInfo, PointerEventData EventData) 
@@ -52,6 +54,17 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
             HitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
             GetComponentInChildren<Animator>().Play("WaterAnim");
         }
+        else
+        {
+            SnapWaterCan();
+        }
+    }
+
+    public void SnapWaterCan() 
+    {
+        transform.SetParent(originalParent);
+        rectTransform.offsetMax = Vector2.zero;
+        rectTransform.offsetMin = Vector2.zero;
     }
 
     IEnumerator LerpObject(PointerEventData PointerEventData)

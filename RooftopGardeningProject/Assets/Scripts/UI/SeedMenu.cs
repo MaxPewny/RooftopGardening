@@ -20,19 +20,32 @@ public class SeedMenu : MonoBehaviour
 
     private void ShowSeeds() 
     {
-        foreach (PlantCurrency Currency in GameplayController.Instance.PlantCurrencies)
+        //foreach (PlantCurrency Currency in GameplayController.Instance.PlantCurrencies)
+        //{
+        //    if (Currency.Seed > 0)
+        //    {
+        //        GameObject seedBag = Instantiate(SeedBagPrefab, ScrollContent.transform);
+        //        SeedBags.Add(seedBag);
+        //        foreach (SeedPackPreset pack in SeedPackPresets)
+        //        {
+        //            if (Currency.Plant == pack.Type)
+        //            {
+        //                seedBag.GetComponent<SeedUi>().SetValues(pack, this);
+        //                break;
+        //            }
+        //        }
+        //    }
+        //}
+        foreach (SeedPackPreset pack in SeedPackPresets)
         {
-            if (Currency.Seed > 0)
+            foreach (PlantCurrency Currency in GameplayController.Instance.PlantCurrencies)
             {
-                GameObject seedBag = Instantiate(SeedBagPrefab, ScrollContent.transform);
-                SeedBags.Add(seedBag);
-                foreach (SeedPackPreset pack in SeedPackPresets)
+                if (Currency.Seed > 0f && Currency.Plant == pack.Type)
                 {
-                    if (Currency.Plant == pack.Type)
-                    {
-                        seedBag.GetComponent<SeedUi>().SetValues(pack, this);
-                        break;
-                    }
+                    GameObject seedBag = Instantiate(SeedBagPrefab, ScrollContent.transform);
+                    SeedBags.Add(seedBag);
+                    seedBag.GetComponent<SeedUi>().SetValues(pack, this);
+                    break;
                 }
             }
         }
