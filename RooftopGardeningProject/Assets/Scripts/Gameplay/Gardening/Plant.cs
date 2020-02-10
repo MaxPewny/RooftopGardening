@@ -13,6 +13,11 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public GameObject FruitPrefab;
     public GameObject ExtraPrefab;
 
+    public GameObject PlantSeedVfx;
+    public GameObject WateringVfx;
+
+    public GameObject VfxPrefab;
+
     public GameObject Bug;
     public GameObject PlantDisplay;
     public GameObject Sign;
@@ -110,6 +115,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         SetExtras();
 
         dataSet = true;
+        PlantSeedVfx.GetComponentInChildren<ParticleSystem>().Play();
     }
 
     public void Check() 
@@ -236,6 +242,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         {
             Sign.GetComponent<SpriteRenderer>().sprite = GrowSignSprite; 
         }
+        WateringVfx.GetComponentInChildren<ParticleSystem>().Play();
     }
 
     public void FertilizePlant()

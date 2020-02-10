@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b39d1532e0264b2499d4325b48c1559a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b57bf3045b2faff4b9e60b5f352fa3a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20e126b392a65f140883e7c55534356b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5724747e0e4190e40a8662832bfea55d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -288,7 +288,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -429,8 +429,8 @@ MonoBehaviour:
   NameBackground: {fileID: 8268136398394922284}
   FavButtonImage: {fileID: 7965028855406401216}
   NameDisplay: {fileID: 7159243025949298633}
-  HighlightedFav: {fileID: 21300000, guid: fb8c153b78196dc4c980649925fe5f2b, type: 3}
-  Fav: {fileID: 21300000, guid: bc392b6b19ee42549ba671592a5e396e, type: 3}
+  HighlightedFav: {fileID: 21300000, guid: 916534531d44e1747afb294838018720, type: 3}
+  Fav: {fileID: 21300000, guid: cebd1162d95b1c34288a42f372ca1a0e, type: 3}
 --- !u!1 &8491764264227645160
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc392b6b19ee42549ba671592a5e396e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cebd1162d95b1c34288a42f372ca1a0e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

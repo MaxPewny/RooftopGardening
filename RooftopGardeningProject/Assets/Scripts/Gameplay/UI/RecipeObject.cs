@@ -54,6 +54,6 @@ public class RecipeObject : MonoBehaviour
 
     public void ShowDesc()
     {
-        recipeList.ShowRecipeDescription(preset.Name, preset.Description);
+        recipeList.ShowRecipeDescription(preset.Name, preset.Ingredients , preset.Description);
     }
 }

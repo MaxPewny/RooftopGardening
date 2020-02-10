@@ -19,5 +19,7 @@ public class RecipePreset : ScriptableObject
 
     public string Name;
 
+    public List<string> Ingredients;
+
     public string Description;
 }

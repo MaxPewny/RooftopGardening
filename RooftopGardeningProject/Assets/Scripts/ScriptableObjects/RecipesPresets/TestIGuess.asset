@@ -15,8 +15,19 @@ MonoBehaviour:
   GivingNeighbor: 0
   RequiredLevel: 0
   Type: 0
-  Icon: {fileID: 21300000, guid: ce04c7004d31b27488a00e6e362c8f34, type: 3}
+  Icon: {fileID: 21300000, guid: a26ffb08eaf206540a00cafdb6fe7654, type: 3}
   UsedColor: {r: 0.764151, g: 0.20545568, b: 0.20545568, a: 0}
   IsVegan: 0
-  Name: 
-  Description: desc
+  Name: Tomaten-Tarte
+  Ingredients:
+  - 3
+  - 3
+  - 4r
+  - 44
+  - 54
+  - 1
+  - 464
+  - z
+  - 54
+  - rz
+  Description: 

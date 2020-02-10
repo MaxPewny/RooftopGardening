@@ -166,11 +166,11 @@ public class RecipeList : MonoBehaviour
 
     }
 
-    public void ShowRecipeDescription(string Name, string Desc) 
+    public void ShowRecipeDescription(string Name,List<string> Ingredients , string Desc) 
     {
         MyRecipeTab.SetActive(false);
         RecipeDesc.SetActive(true);
-        RecipeDesc.GetComponent<RecipeDescription>().SetUI(Name, Desc);
+        RecipeDesc.GetComponent<RecipeDescription>().SetUI(Name, Ingredients, Desc);
     }
 
     public void SetRecipe(RecipePreset SetPreset)

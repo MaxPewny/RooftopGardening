@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ChivesInventoryPreset
   m_EditorClassIdentifier: 
   Type: 9
-  Icon: {fileID: 21300000, guid: d722a9c0f436f5c4eb0303a323b5da4d, type: 3}
+  Icon: {fileID: 21300000, guid: 631f5890d2712c44d855a7f41bae85d0, type: 3}
   Name: Schnittlauch
