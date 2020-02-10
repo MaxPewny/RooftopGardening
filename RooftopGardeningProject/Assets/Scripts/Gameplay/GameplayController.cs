@@ -28,8 +28,8 @@ public class GameplayController : Singleton<GameplayController>
     public float MaxPlayerXp;
 
 
-    public int GardenSpotsCount = 2;
-    public int PlantsPerSpotCount = 3;
+    public int GardenSpotsCount = 11;
+    public int PlantsPerSpotCount = 4;
 
     private void Awake()
     {

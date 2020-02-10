@@ -12,12 +12,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Inventory.unity
     guid: 1b35c728fb059434799c2bb978c16c9b
   - enabled: 1
-    path: Assets/Scenes/Garden_1.unity
-    guid: c028308d11c9ee84eb66df686770eccb
-  - enabled: 1
-    path: Assets/Scenes/Garden_2.unity
-    guid: 0ecd57c3efef18b4388b43490b3e9990
-  - enabled: 1
     path: Assets/Scenes/ManagementMenu.unity
     guid: 72348a4d67398304e9afbb16e7afcb16
+  - enabled: 1
+    path: Assets/Scenes/Garden_FM.unity
+    guid: c028308d11c9ee84eb66df686770eccb
+  - enabled: 1
+    path: Assets/Scenes/Garden_MM.unity
+    guid: 0ecd57c3efef18b4388b43490b3e9990
+  - enabled: 1
+    path: Assets/Scenes/Garden_FR.unity
+    guid: 25053b0671cb10d47ae7a4e43c37572f
+  - enabled: 1
+    path: Assets/Scenes/Garden_MR.unity
+    guid: b8b722273b1e71f49bc4b0930939bbe9
+  - enabled: 1
+    path: Assets/Scenes/Garden_BR.unity
+    guid: a9678788a0d79e9439af9f944124d1e6
+  - enabled: 1
+    path: Assets/Scenes/Garden_FL.unity
+    guid: dac9388dc4902f24b89e6f09d066a6a3
+  - enabled: 1
+    path: Assets/Scenes/Garden_BM.unity
+    guid: 9ec65c64ead084d4d93d565ef3fca8d1
+  - enabled: 1
+    path: Assets/Scenes/Garden_SpecialHerbs.unity
+    guid: 6f0597852c4ee624ba7f999f0a3524c7
+  - enabled: 1
+    path: Assets/Scenes/Garden_BL.unity
+    guid: 9c34bc53b587a244db81e2aedefc5051
+  - enabled: 1
+    path: Assets/Scenes/Garden_ML.unity
+    guid: e6e69d84433bce04ea6c316d7767e3a0
+  - enabled: 1
+    path: Assets/Scenes/Garden_SpecialSide.unity
+    guid: 270eecf4afaa69e44a043508235a18d2
   m_configObjects: {}
