@@ -214,7 +214,8 @@ public class Plant : MonoBehaviour, IPointerClickHandler
             hasFruits = true;
             foreach (var fruitPreset in preset.FruitObjects)
             {
-                GameObject fruit = Instantiate(FruitPrefab, transform.position + fruitPreset.Position, Quaternion.identity, transform);
+                GameObject fruit = Instantiate(FruitPrefab, transform.position /* + fruitPreset.Position */, transform.rotation, transform);
+                fruit.transform.localPosition = fruitPreset.Position;
                 fruit.transform.localScale = fruitPreset.Scale;
                 fruit.GetComponent<BoxCollider>().size = fruitPreset.ColliderSize;
                 Fruits.Add(fruit);
@@ -229,7 +230,8 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     {
         foreach (var extraPreset in preset.ExtraObjects)
         {
-            GameObject extra = Instantiate(ExtraPrefab, transform.position + extraPreset.Position, Quaternion.identity, transform);
+            GameObject extra = Instantiate(ExtraPrefab, transform.position /* + extraPreset.Position */, transform.rotation, transform);
+            extra.transform.localPosition = extraPreset.Position;
             extra.transform.localScale = extraPreset.Scale;
             extra.GetComponent<SpriteRenderer>().sprite = extraPreset.UsedSprite;
         }      
