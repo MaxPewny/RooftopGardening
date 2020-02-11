@@ -33,6 +33,8 @@ public class GameplayController : Singleton<GameplayController>
 
     private void Awake()
     {
+        Notification.Instance.OpenAndroidNotificationChannel();
+
         MaxPlayerXp = 300 * (int)PlayerLevel;
         if (MaxPlayerXp < 300)
         {
@@ -125,6 +127,10 @@ public class GameplayController : Singleton<GameplayController>
                 UsedData.NextGrowthDate = DateTime.Now.AddHours(UsedData.GrowCycleTime).ToString();
                 Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen wachsen, sieh sie dir an");
                 UsedData.PlantLevel++;
+                if (UsedData.PlantLevel > UsedData.MaxPlantLevel) 
+                {
+                    Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen tragen Früchte, sieh sie dir an");
+                }
             }
             else
             {
@@ -245,6 +251,7 @@ public class GameplayController : Singleton<GameplayController>
                 {
                     data.NextBugDate = DateTime.Now.AddHours(BugApperanceTime).ToString();
                     data.BugIsThere = false;
+                    Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(BugApperanceTime), "Rooftop Garden", "Ein Shädling frisst deine Pflanzen, vertreibe ihn");
                     //data.BugCounter--;
                     return;
                 }

@@ -7,6 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public void ClickStart()
     {
-        SceneManager.LoadScene("Garden_1");
+        SceneManager.LoadScene("Garden_FM");
     }
 }

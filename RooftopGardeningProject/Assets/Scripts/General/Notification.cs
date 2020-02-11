@@ -22,10 +22,10 @@ public class Notification : Singleton<Notification>
 
     private void Start()
     {
-        OpenAndroidNotificationChannel();
+        //OpenAndroidNotificationChannel();
     }
 
-    void OpenAndroidNotificationChannel()
+    public void OpenAndroidNotificationChannel()
     {
 #if UNITY_ANDROID
         AndroidNotificationCenter.RegisterNotificationChannel(defaultNotificationChannel);
