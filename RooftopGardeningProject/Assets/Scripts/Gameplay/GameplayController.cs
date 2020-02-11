@@ -24,7 +24,7 @@ public class GameplayController : Singleton<GameplayController>
     public string CurrentSceneName;
 
     public float PlayerXp;
-    public Level PlayerLevel = Level.LEVEL_1;
+    public Level PlayerLevel = Level.LEVEL_10;
     public float MaxPlayerXp;
 
 
@@ -157,11 +157,11 @@ public class GameplayController : Singleton<GameplayController>
 
             UsedData.NeighborXp = UsedData.NeighborXp - UsedData.MaxXp;
 
-            UsedData.MaxXp = 300 * ((int)UsedData.NeighborLevel + 1);
+            UsedData.MaxXp = 30 * ((int)UsedData.NeighborLevel + 1);
 
-            if (UsedData.MaxXp < 300)
+            if (UsedData.MaxXp < 30)
             {
-                UsedData.MaxXp = 300;
+                UsedData.MaxXp = 30;
             }
 
 

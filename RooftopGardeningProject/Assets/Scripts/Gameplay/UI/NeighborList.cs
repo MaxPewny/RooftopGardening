@@ -22,4 +22,35 @@ public class NeighborList : MonoBehaviour
             }
         }
     }
+
+    public void ShowHaraldTasks() 
+    {
+        foreach (NeighborObject neighbor in GetComponentsInChildren<NeighborObject>())
+        {
+            if (neighbor.SelectedNeighbor == Neighbor.HARALD)
+            {
+                neighbor.ShowTaskList();
+            }
+        }
+    }
+    public void ShowMiraTasks()
+    {
+        foreach (NeighborObject neighbor in GetComponentsInChildren<NeighborObject>())
+        {
+            if (neighbor.SelectedNeighbor == Neighbor.MIRA)
+            {
+                neighbor.ShowTaskList();
+            }
+        }
+    }
+    public void ShowKitaTasks()
+    {
+        foreach (NeighborObject neighbor in GetComponentsInChildren<NeighborObject>())
+        {
+            if (neighbor.SelectedNeighbor == Neighbor.KITA)
+            {
+                neighbor.ShowTaskList();
+            }
+        }
+    }
 }

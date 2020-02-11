@@ -9,7 +9,7 @@ public class NeighborData
 
     public float NeighborXp;
 
-    public float MaxXp = 300;
+    public float MaxXp = 30;
 
     public int SolvedTasks;
 

@@ -604,12 +604,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651d117b69ddfa4c916089d58759e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 0}
   SelectedNeighbor: 0
-  TaskPresets:
-  - {fileID: 11400000, guid: 3b7c24b817206244f8b42653339152e2, type: 2}
   NeighborList: {fileID: 0}
   NeighborTaskList: {fileID: 0}
+  Manager: {fileID: 0}
+  TaskPresets:
+  - {fileID: 11400000, guid: 3b7c24b817206244f8b42653339152e2, type: 2}
+  - {fileID: 11400000, guid: b5cf5f4f8ce28734e9a4a72b536234b9, type: 2}
+  - {fileID: 11400000, guid: 5c50d8b0503b2434485d3855704ade25, type: 2}
+  - {fileID: 11400000, guid: 1196a87b62483534abdcb7f46b284662, type: 2}
+  - {fileID: 11400000, guid: 0a601fd99710c734e87e696031717efb, type: 2}
+  - {fileID: 11400000, guid: 1b94ca8590dc8bc4d882dc035646e0a4, type: 2}
+  - {fileID: 11400000, guid: cbe789e3c5a272c4f9a4b561b1ec428e, type: 2}
+  - {fileID: 11400000, guid: 48ac67b7fc7f4284e906f3d9da1e4944, type: 2}
+  - {fileID: 11400000, guid: c9d24a7e05b06214fbed3d9489dc1729, type: 2}
+  - {fileID: 11400000, guid: fb1419696350d1d4fb18215009294144, type: 2}
+  - {fileID: 11400000, guid: 699f181f0d202e44cb3979acfd441866, type: 2}
+  - {fileID: 11400000, guid: dc78bf777ca991b448e74987a071741c, type: 2}
   XpFill: {fileID: 687825003448031292}
   LevelDisplay: {fileID: 687825003680306962}
   Name: {fileID: 687825002751340393}
