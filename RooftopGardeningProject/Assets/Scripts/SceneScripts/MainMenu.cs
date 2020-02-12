@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
         try
         {
             Notification.Instance.OpenAndroidNotificationChannel();
-            Notification.Instance.SendAndroidNotification(DateTime.Now, "Rooftop Gardening", "Willkomen zu deinem Persöhnlichen Garten");
+            Notification.Instance.SendAndroidNotification(DateTime.Now, "Rooftop Gardening", "Willkomen zu deinem Persönlichen Garten");
         }
         catch (Exception e)
         {

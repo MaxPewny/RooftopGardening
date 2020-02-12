@@ -23,6 +23,8 @@ public class TaskList : MonoBehaviour
     public Sprite KitaBg;
     public Sprite DefaultBg;
 
+    public AudioSource SwitchAudio;
+
     private float xpFillValue;
     private int level;
     private List<GameObject> tasks = new List<GameObject>();
@@ -96,6 +98,11 @@ public class TaskList : MonoBehaviour
         NeighborList.SetActive(true);
         gameObject.SetActive(false);
         NeighborList.GetComponent<NeighborList>().ShowKitaTasks();
+    }
+
+    private void OnEnable()
+    {
+        SwitchAudio.Play();
     }
 
     private void OnDisable()
