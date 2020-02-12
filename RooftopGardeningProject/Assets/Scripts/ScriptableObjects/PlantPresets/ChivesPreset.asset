@@ -19,23 +19,23 @@ MonoBehaviour:
   PlantObjects:
   - ObjectLevel: 1
     UsedSprite: {fileID: 21300000, guid: 81703418f779dfe47a2a9da7f5fd80db, type: 3}
-    Position: {x: 0.3, y: 0, z: 0}
-    Scale: {x: 0.4, y: 0.4, z: 0.4}
+    Position: {x: 0.1, y: -0.2, z: 0.15}
+    Scale: {x: 0.35, y: 0.35, z: 0.35}
     ColliderSize: {x: 2, y: 0.6, z: 0.3}
   - ObjectLevel: 2
     UsedSprite: {fileID: 21300000, guid: c38251c76db68aa4799baccf98ff7a11, type: 3}
-    Position: {x: 0.3, y: 0.2, z: 0}
+    Position: {x: 0.1, y: -0.25, z: 0.15}
     Scale: {x: 0.4, y: 0.4, z: 0.4}
     ColliderSize: {x: 2, y: 0.8, z: 0.3}
   - ObjectLevel: 3
     UsedSprite: {fileID: 21300000, guid: 385fc35597211d340b02816308ff02d0, type: 3}
-    Position: {x: 0.3, y: 0.2, z: 0}
-    Scale: {x: 0.4, y: 0.4, z: 0.4}
+    Position: {x: 0, y: -0.1, z: 0.1}
+    Scale: {x: 0.3, y: 0.3, z: 0.3}
     ColliderSize: {x: 2, y: 1.6, z: 0.3}
   - ObjectLevel: 4
     UsedSprite: {fileID: 21300000, guid: 36a47c7a29e4f8341aaccc51e4d54d6a, type: 3}
-    Position: {x: 0.3, y: -0.2, z: 0}
-    Scale: {x: 0.4, y: 0.4, z: 0.4}
+    Position: {x: 0.1, y: -0.4, z: 0.1}
+    Scale: {x: 0.3, y: 0.3, z: 0.3}
     ColliderSize: {x: 2, y: 0.6, z: 0.3}
   FruitObjects: []
   CycleDisappearCount: 3

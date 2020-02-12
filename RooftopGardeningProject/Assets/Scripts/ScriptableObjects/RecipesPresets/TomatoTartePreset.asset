@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3b485aadc10bb42a7f1a0935a006a3, type: 3}
+  m_Name: TomatoTartePreset
+  m_EditorClassIdentifier: 
+  GivingNeighbor: 0
+  RequiredLevel: 0
+  Type: 0
+  Icon: {fileID: 21300000, guid: a26ffb08eaf206540a00cafdb6fe7654, type: 3}
+  UsedColor: {r: 0.764151, g: 0.20545568, b: 0.20545568, a: 0}
+  IsVegan: 0
+  Name: Tomaten-Tarte
+  Ingredients:
+  - 250 g Mehl
+  - 100 g Butter
+  - "0,5 Teel\xF6ffel Salz"
+  - 1 Ei
+  - 800 g kleine Tomaten
+  - "2 Essl\xF6ffel saure Sahne"
+  - "2 Essl\xF6ffel Zitronensaft"
+  - "2 Essl\xF6ffel \xD6l"
+  - "2 Essl\xF6ffel Balsamessig"
+  - Etwas Salz und Pfeffer
+  - Etwas frischer Oregano
+  - Bund Basilikum
+  Description: "Backofen auf 175\xB0C Umluft vorheizen und eine Springform einfetten.
+    Butter in Fl\xF6ckchen mit Mehl, Salz und Ei zu einem Teig kneten, in Folie wickeln
+    und gut eine Stunde im K\xFChlschrank ruhen lassen. Inzwischen die Saure Sahne
+    mit Zitronensaft, Salz und Pfeffer verr\xFChren. Tomaten waschen und in ca. 1/2
+    cm dicke Scheiben schneiden. Die Form mit dem Teig auskleiden, so dass ein gut
+    3 cm hoher Rand entsteht. Teigboden mehrmals mit der Gabel einstechen. Teig in
+    der Form ca. 10 Minuten vorbacken. Danach etwas abk\xFChlen lassen. Den Boden
+    mit der Sahne Masse ausstreichen und die Tomatenscheiben darauf verteilen und
+    mit Balsamico-Essig betr\xE4ufeln. Zum Schluss die Tarte mit \xD6l betr\xE4ufeln
+    und im Ofen 20-25 Minuten backen. Tarte mit Oreganobl\xE4ttchen und Basilikum
+    bestreut servieren. "

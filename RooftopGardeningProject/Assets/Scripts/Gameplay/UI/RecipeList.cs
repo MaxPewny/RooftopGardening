@@ -8,6 +8,7 @@ public class RecipeList : MonoBehaviour
     public GameObject ListCanvas;
     public GameObject RecipeDesc;
     public GameObject MyRecipeTab;
+    public GameObject PageTurn;
 
     public List<RecipePreset> RecipePresets;
 
@@ -191,6 +192,7 @@ public class RecipeList : MonoBehaviour
 
     private void OnDisable()
     {
+        PageTurn.GetComponent<PageTurn>().TurnPage();
         MyRecipeTab.SetActive(true);
         RecipeDesc.SetActive(false);
     }

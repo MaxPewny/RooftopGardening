@@ -18,17 +18,17 @@ MonoBehaviour:
   ExtraObjects: []
   PlantObjects:
   - ObjectLevel: 0
-    UsedSprite: {fileID: 21300000, guid: 4c10285d37632ab479dd73d0c45a030d, type: 3}
+    UsedSprite: {fileID: 21300000, guid: 67d7583f90d095347ad68dee45c5af1a, type: 3}
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     ColliderSize: {x: 1, y: 1, z: 0.25}
   - ObjectLevel: 0
-    UsedSprite: {fileID: 21300000, guid: 8530d5fc272ec7e488376d5d08d8559e, type: 3}
+    UsedSprite: {fileID: 21300000, guid: dadc2734495838044be31cee214d23a5, type: 3}
     Position: {x: 0, y: 0.3, z: 0}
     Scale: {x: 1.5, y: 1.5, z: 1.5}
     ColliderSize: {x: 1, y: 2, z: 0.35}
   - ObjectLevel: 0
-    UsedSprite: {fileID: 21300000, guid: 92834b536d864404f99c1d2a227f1648, type: 3}
+    UsedSprite: {fileID: 21300000, guid: a635b5729b2d57b4a9eb26d4fee407a5, type: 3}
     Position: {x: 0, y: 0.3, z: 0}
     Scale: {x: 2, y: 2, z: 2}
     ColliderSize: {x: 1, y: 3, z: 0.3}

@@ -63,7 +63,7 @@ public class SeedMenu : MonoBehaviour
         {
             if (currency.Plant == Type)
             {
-                currency.Seed--;
+                //currency.Seed--;
                 break;
             }
         }

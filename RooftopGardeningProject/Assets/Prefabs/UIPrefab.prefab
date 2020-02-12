@@ -335,8 +335,8 @@ RectTransform:
   m_Father: {fileID: 5984884601819876057}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.47028083, y: 0.835119}
-  m_AnchorMax: {x: 0.55657905, y: 0.88456345}
+  m_AnchorMin: {x: 0.47028083, y: 0.91222036}
+  m_AnchorMax: {x: 0.55657905, y: 0.9616648}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5984884603337150819}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.3287709
+  m_Size: 0.32887483
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1648,7 +1648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5984884602782799608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1665,8 +1665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1246}
-  m_SizeDelta: {x: 0, y: 1327}
+  m_AnchoredPosition: {x: 0, y: -1991}
+  m_SizeDelta: {x: 0, y: 1445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5984884602782799606
 CanvasRenderer:
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8207547, g: 0.79559183, b: 0.7239676, a: 1}
+  m_Color: {r: 1, g: 0.9607844, b: 0.5764706, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2120,7 +2120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5984884603285771814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3219,8 +3219,8 @@ RectTransform:
   m_Father: {fileID: 5984884601819876057}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.827, y: 0.8092963}
-  m_AnchorMax: {x: 0.95900005, y: 0.88159263}
+  m_AnchorMin: {x: 0.81719995, y: 0.8851344}
+  m_AnchorMax: {x: 0.9492, y: 0.9574307}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3538,11 +3538,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5984884602890145172}
     m_Modifications:
-    - target: {fileID: 1606229995825064239, guid: c13d6038acaea2e46b28c9a502ecfad2,
-        type: 3}
-      propertyPath: m_Name
-      value: PlantingShovel
-      objectReference: {fileID: 0}
     - target: {fileID: 1606229995825064238, guid: c13d6038acaea2e46b28c9a502ecfad2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3647,6 +3642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606229995825064239, guid: c13d6038acaea2e46b28c9a502ecfad2,
+        type: 3}
+      propertyPath: m_Name
+      value: PlantingShovel
       objectReference: {fileID: 0}
     - target: {fileID: 2443470499744523031, guid: c13d6038acaea2e46b28c9a502ecfad2,
         type: 3}
@@ -3798,11 +3798,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5984884602890145172}
     m_Modifications:
-    - target: {fileID: 1606229995825064239, guid: c0d7d1a3233b8cc48bf71062172ece17,
+    - target: {fileID: 1250640655046240545, guid: c0d7d1a3233b8cc48bf71062172ece17,
         type: 3}
-      propertyPath: m_Name
-      value: HerbScissors
-      objectReference: {fileID: 0}
+      propertyPath: MovingCanvas
+      value: 
+      objectReference: {fileID: 5984884601819876061}
     - target: {fileID: 1606229995825064238, guid: c0d7d1a3233b8cc48bf71062172ece17,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3908,11 +3908,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1250640655046240545, guid: c0d7d1a3233b8cc48bf71062172ece17,
+    - target: {fileID: 1606229995825064239, guid: c0d7d1a3233b8cc48bf71062172ece17,
         type: 3}
-      propertyPath: MovingCanvas
-      value: 
-      objectReference: {fileID: 5984884601819876061}
+      propertyPath: m_Name
+      value: HerbScissors
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d7d1a3233b8cc48bf71062172ece17, type: 3}
 --- !u!224 &8014506433111818725 stripped

@@ -33,7 +33,7 @@ public class GameplayController : Singleton<GameplayController>
 
     private void Awake()
     {
-        Notification.Instance.OpenAndroidNotificationChannel();
+        //Notification.Instance.OpenAndroidNotificationChannel();
 
         MaxPlayerXp = 300 * (int)PlayerLevel;
         if (MaxPlayerXp < 300)

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TaskList : MonoBehaviour
 {
     public MenuManager Manager;
+    public GameObject PageTurn;
     public Neighbor SelectedNeighbor;
 
     public Image Background;
@@ -99,6 +100,7 @@ public class TaskList : MonoBehaviour
 
     private void OnDisable()
     {
+        PageTurn.GetComponent<PageTurn>().TurnPage();
         for (int i = tasks.Count - 1; i >= 0; i--)
         {
             Destroy(tasks[i]);

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BeetrootYellowPack
   m_EditorClassIdentifier: 
   Type: 7
-  Seed: {fileID: -8734326887176718260, guid: 89c542128b6549e48a4b614538fea15f, type: 3}
-  Name: 
+  Seed: {fileID: 21300000, guid: 60addf161246e664a8f06c4fe840465a, type: 3}
+  Name: Gelbe Beete

@@ -16,7 +16,7 @@ public class RecipeDescription : MonoBehaviour
         foreach (string ingredients in SetIngredients)
         {
             descBuilder.Append(ingredients);
-            descBuilder.Append("/n");
+            descBuilder.Append(" \n ");
         }
         descBuilder.Append(SetDesc);
         Description.text = descBuilder.ToString();

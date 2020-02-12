@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1606229995825064227}
   - component: {fileID: 1606229995825064236}
   - component: {fileID: 1250640655046240545}
+  - component: {fileID: 1015498913467706328}
   m_Layer: 5
   m_Name: HerbScissors
   m_TagString: Untagged
@@ -90,3 +91,22 @@ MonoBehaviour:
   RaycastLayerMask:
     serializedVersion: 2
     m_Bits: 1
+--- !u!95 &1015498913467706328
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606229995825064239}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33afa22d007ea804792c2d457cebafef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryList : MonoBehaviour
 {
+    public GameObject PageTurn;
     public GameObject InventoryPrefab;
     public GameObject ListCanvas;
     public List<InventoryPreset> Presets = new List<InventoryPreset>();
@@ -30,6 +31,7 @@ public class InventoryList : MonoBehaviour
 
     public void OnDisable()
     {
+        PageTurn.GetComponent<PageTurn>().TurnPage();
         for (int i = listEntries.Count - 1; i >= 0; i--)
         {
             Destroy(listEntries[i]);

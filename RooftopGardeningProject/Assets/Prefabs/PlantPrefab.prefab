@@ -218,7 +218,14 @@ MonoBehaviour:
     type: 3}
   PlantSeedVfx: {fileID: 5951058161248813187}
   WateringVfx: {fileID: 4655468503716706450}
-  VfxPrefab: {fileID: 0}
+  HarvestVfxPrefab: {fileID: 4952820503295468706, guid: 928038551bddee8469f9691b926a3b24,
+    type: 3}
+  GrowVfxPrefab: {fileID: 4396668809543907761, guid: 37a0c79e6e66e72468b29a8ddf1835e1,
+    type: 3}
+  DestroyVfxPrefab: {fileID: 8679475344849645853, guid: 226c77f84a9835b44bb9b8436ef2938c,
+    type: 3}
+  CutVfxPrefab: {fileID: 7868530609102419356, guid: fae410e24cefabc4d81b26d2188ffe83,
+    type: 3}
   Bug: {fileID: 1002516784651559854}
   PlantDisplay: {fileID: 1781006437946378567}
   Sign: {fileID: 3695691464946934081}
@@ -241,7 +248,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.3}
-  m_Center: {x: 0, y: -0.00000023841858, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &949148447492635975
 PrefabInstance:
   m_ObjectHideFlags: 0

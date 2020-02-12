@@ -32,8 +32,21 @@ public class HerbScissors : MonoBehaviour, IDragHandler, IEndDragHandler
             if (hitInfo.transform.tag == "Plant")
             {
                 hitInfo.transform.gameObject.GetComponent<Plant>().CutHerb();
+                GetComponent<Animator>().SetTrigger("cut");
+            }
+            else 
+            {
+                SnapScissors();
             }
         }
+        else 
+        {
+            SnapScissors();
+        }
+    }
+
+    public void SnapScissors() 
+    {
         transform.SetParent(originalParent);
         transform.gameObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         transform.gameObject.GetComponent<RectTransform>().offsetMin = Vector2.zero;

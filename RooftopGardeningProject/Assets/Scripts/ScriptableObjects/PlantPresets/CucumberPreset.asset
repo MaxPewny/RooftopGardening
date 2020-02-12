@@ -35,12 +35,12 @@ MonoBehaviour:
   FruitObjects:
   - RipeSprite: {fileID: 21300000, guid: 7dde872316a83a9488f13183117edde9, type: 3}
     UnripeSprite: {fileID: 0}
-    Position: {x: 1.2, y: 3, z: -1}
+    Position: {x: 0.5, y: 2, z: -1}
     Scale: {x: 0.5, y: 0.5, z: 0.5}
     ColliderSize: {x: 1, y: 2.2, z: 0.5}
   - RipeSprite: {fileID: 21300000, guid: 7dde872316a83a9488f13183117edde9, type: 3}
     UnripeSprite: {fileID: 0}
-    Position: {x: 1.5, y: 0.5, z: -1}
+    Position: {x: 0.6, y: 0.5, z: -1}
     Scale: {x: 0.5, y: 0.5, z: 0.5}
     ColliderSize: {x: 1, y: 2.2, z: 0.5}
   CycleDisappearCount: 4

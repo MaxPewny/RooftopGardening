@@ -16,7 +16,10 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public GameObject PlantSeedVfx;
     public GameObject WateringVfx;
 
-    public GameObject VfxPrefab;
+    public GameObject HarvestVfxPrefab;
+    public GameObject GrowVfxPrefab;
+    public GameObject DestroyVfxPrefab;
+    public GameObject CutVfxPrefab;
 
     public GameObject Bug;
     public GameObject PlantDisplay;
@@ -314,6 +317,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         {
             if (!hasFruits && isRipe)
             {
+                Instantiate(HarvestVfxPrefab, transform.position, transform.rotation);
                 GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
                 GetComponentInParent<GardenSlot>().ResetPlantSlot();
             }
@@ -326,6 +330,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
         {
             wasCut = true;
             GameplayController.Instance.FruitHarvested(GardenNumber, PlantNumber);
+            Instantiate(CutVfxPrefab, transform.position, transform.rotation);
             GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].CycleDisappearCount--;
             if (GameplayController.Instance.PlantDatas[GardenNumber][PlantNumber].CycleDisappearCount <= 0)
             {
@@ -336,6 +341,11 @@ public class Plant : MonoBehaviour, IPointerClickHandler
             ChangeSprite(Level.LEVEL_1);
             
         }
+    }
+
+    private void OnDestroy()
+    {
+        //Instantiate(DestroyVfxPrefab, transform.position, transform.rotation);
     }
 
     //public void Check()

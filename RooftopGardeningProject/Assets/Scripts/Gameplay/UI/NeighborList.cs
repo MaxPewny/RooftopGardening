@@ -7,6 +7,7 @@ public class NeighborList : MonoBehaviour
 {
     public GameObject NeighborPrefab;
     public GameObject ListCanvas;
+    public GameObject PageTurn;
 
     public GameObject TaskList;
     public MenuManager UsedManager;
@@ -52,5 +53,9 @@ public class NeighborList : MonoBehaviour
                 neighbor.ShowTaskList();
             }
         }
+    }
+    private void OnDisable()
+    {
+        PageTurn.GetComponent<PageTurn>().TurnPage();
     }
 }

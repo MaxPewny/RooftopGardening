@@ -13,7 +13,7 @@ public class Notification : Singleton<Notification>
 #if UNITY_ANDROID
     AndroidNotificationChannel defaultNotificationChannel = new AndroidNotificationChannel()
     {
-        Id = "channel_0",
+        Id = "channel_rg0",
         Name = "Default Channel",
         Importance = Importance.High,
         Description = "Generic notifications",
@@ -35,12 +35,25 @@ public class Notification : Singleton<Notification>
     public void SendAndroidNotification(DateTime FireTime, string Title, string Text )
     {
 #if UNITY_ANDROID
-        AndroidNotification notification = new AndroidNotification();
-        notification.Title = Title;
-        notification.Text = Text;
-        notification.FireTime = FireTime;
+        try
+        {
+            AndroidNotification notification = new AndroidNotification();
+            notification.Title = Title;
+            notification.Text = Text;
+            notification.FireTime = FireTime;
 
-        AndroidNotificationCenter.SendNotification(notification, "channel_0");
+            AndroidNotificationCenter.SendNotification(notification, "channel_rg0");
+        }
+        catch (Exception)
+        { 
+            var notification = new AndroidNotification();
+            notification.Title = "SomeTitle";
+            notification.Text = "SomeText";
+            notification.FireTime = System.DateTime.Now.AddMinutes(5);
+
+            AndroidNotificationCenter.SendNotification(notification, "channel_rg0");
+        }
+        
 #endif
     }
 }
