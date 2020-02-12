@@ -7,7 +7,7 @@
     public PlantCurrency(PlantType GivenType) 
     {
         Plant = GivenType;
-        Fruit = 5;
+        Fruit = 0;
         Seed = 5;
     }
 }

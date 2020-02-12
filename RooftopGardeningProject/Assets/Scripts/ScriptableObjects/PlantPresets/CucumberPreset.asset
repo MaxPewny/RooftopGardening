@@ -19,17 +19,17 @@ MonoBehaviour:
   PlantObjects:
   - ObjectLevel: 1
     UsedSprite: {fileID: 21300000, guid: 2f0f0130eddd88349a580a2b38e7363b, type: 3}
-    Position: {x: 0.25, y: 1.5, z: 0}
+    Position: {x: 0.25, y: 1, z: 0.4}
     Scale: {x: 0.7, y: 0.7, z: 0.7}
     ColliderSize: {x: 1.8, y: 1, z: 0.3}
   - ObjectLevel: 2
     UsedSprite: {fileID: 21300000, guid: 64d0ec17ac849854fa76bab91c4a4b42, type: 3}
-    Position: {x: 0.25, y: 1.5, z: 0}
+    Position: {x: 0.25, y: 1, z: 0.4}
     Scale: {x: 0.7, y: 0.7, z: 0.7}
     ColliderSize: {x: 1.8, y: 2.3, z: 0.3}
   - ObjectLevel: 3
     UsedSprite: {fileID: 21300000, guid: 96b995f43cb822b48a6248be70db725c, type: 3}
-    Position: {x: 0.25, y: 1.5, z: 0}
+    Position: {x: 0.25, y: 1, z: 0.4}
     Scale: {x: 0.7, y: 0.7, z: 0.7}
     ColliderSize: {x: 1.8, y: 6.2, z: 0.3}
   FruitObjects:

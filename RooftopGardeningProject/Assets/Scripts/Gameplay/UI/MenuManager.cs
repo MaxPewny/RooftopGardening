@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        activeMenu = NeighborList;
+        activeMenu = InventoryList;
     }
 
     public void ShowNeighbors() 

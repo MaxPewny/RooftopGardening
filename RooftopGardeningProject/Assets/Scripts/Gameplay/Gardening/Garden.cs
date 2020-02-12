@@ -14,8 +14,25 @@ public class Garden : MonoBehaviour
 
     public List<GameObject> Weeds;
 
+    public AudioSource MoveAudio;
+    public AudioSource BackToGardenAudio;
+    public AudioSource StartAudio;
+
     private void Start()
     {
+        if (GameplayController.Instance.CurrentSceneName == "ManagementMenu" )
+        {
+            BackToGardenAudio.Play();
+        }
+        else if (GameplayController.Instance.CurrentSceneName == "")
+        {
+            StartAudio.Play();
+        }
+        else
+        {
+            MoveAudio.Play();
+        }
+
         GameplayController.Instance.CurrentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         //Debug.Log(GameplayController.Instance.CurrentSceneName);
         GameplayController.Instance.GardenDatas[GardenNumber].WeedAppearanceTimer = WeedAppearanceTimer;

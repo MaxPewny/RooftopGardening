@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781006437946378567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6119722097454875130}
@@ -45,6 +45,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -125,6 +126,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -171,6 +173,7 @@ GameObject:
   - component: {fileID: 6119722097454875130}
   - component: {fileID: 6881277735744520070}
   - component: {fileID: 2011645704}
+  - component: {fileID: 6059525578549861580}
   m_Layer: 0
   m_Name: PlantPrefab
   m_TagString: Plant
@@ -232,10 +235,11 @@ MonoBehaviour:
   WaterSignSprite: {fileID: 21300000, guid: e295b531f93c3e244b211f63798c6735, type: 3}
   GrowSignSprite: {fileID: 21300000, guid: da4879a792ff49d4f8fd909352f05864, type: 3}
   FruitSignSprite: {fileID: 21300000, guid: 26a3063a3eff7f74a8f21875bae69b00, type: 3}
+  SowAudio: {fileID: 6059525578549861580}
   Fruits: []
   BugApperanceTime: 1
-  GrowCycleTime: 1
-  WaterCycleTime: 1
+  GrowCycleTime: 2
+  WaterCycleTime: 10000
 --- !u!65 &2011645704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -249,6 +253,103 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &6059525578549861580
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5106781866053858808}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5066572482791222006, guid: 5bd2ffb9b1a004c4199095923220a9fa,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 3668fa038d4b79441b59a32db7d6543e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &949148447492635975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,6 +357,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6119722097454875130}
     m_Modifications:
+    - target: {fileID: 5600092595945634618, guid: a0c2222786bf3944e84856445a78ddbc,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5600092596587513301, guid: a0c2222786bf3944e84856445a78ddbc,
         type: 3}
       propertyPath: m_Name
@@ -316,11 +422,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5600092595945634618, guid: a0c2222786bf3944e84856445a78ddbc,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c2222786bf3944e84856445a78ddbc, type: 3}
 --- !u!1 &4655468503716706450 stripped
@@ -342,10 +443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6119722097454875130}
     m_Modifications:
-    - target: {fileID: 6915900651819844165, guid: fab4e92aaf4d21c40b4a731daf007fb0,
+    - target: {fileID: 2604147390026561268, guid: fab4e92aaf4d21c40b4a731daf007fb0,
         type: 3}
-      propertyPath: m_Name
-      value: sow_salad_vfx
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4573966101673074112, guid: fab4e92aaf4d21c40b4a731daf007fb0,
         type: 3}
@@ -402,10 +503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2604147390026561268, guid: fab4e92aaf4d21c40b4a731daf007fb0,
+    - target: {fileID: 6915900651819844165, guid: fab4e92aaf4d21c40b4a731daf007fb0,
         type: 3}
-      propertyPath: playOnAwake
-      value: 0
+      propertyPath: m_Name
+      value: sow_salad_vfx
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab4e92aaf4d21c40b4a731daf007fb0, type: 3}
@@ -428,16 +529,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6119722097454875130}
     m_Modifications:
-    - target: {fileID: 7325284801394575819, guid: 46d2f7f0ae259b045a31358f26a45e58,
-        type: 3}
-      propertyPath: m_Name
-      value: Bug
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325284801394575819, guid: 46d2f7f0ae259b045a31358f26a45e58,
-        type: 3}
-      propertyPath: m_TagString
-      value: Bug
-      objectReference: {fileID: 0}
     - target: {fileID: 2323561549199130278, guid: 46d2f7f0ae259b045a31358f26a45e58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -503,16 +594,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.17
       objectReference: {fileID: 0}
-    - target: {fileID: 7215333566886410689, guid: 46d2f7f0ae259b045a31358f26a45e58,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215333566886410689, guid: 46d2f7f0ae259b045a31358f26a45e58,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.12
-      objectReference: {fileID: 0}
     - target: {fileID: 3589529648488655506, guid: 46d2f7f0ae259b045a31358f26a45e58,
         type: 3}
       propertyPath: m_SortingOrder
@@ -524,6 +605,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 575829b4a28c5904a9d4bc612b5906a2,
         type: 3}
+    - target: {fileID: 7215333566886410689, guid: 46d2f7f0ae259b045a31358f26a45e58,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215333566886410689, guid: 46d2f7f0ae259b045a31358f26a45e58,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325284801394575819, guid: 46d2f7f0ae259b045a31358f26a45e58,
+        type: 3}
+      propertyPath: m_Name
+      value: Bug
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325284801394575819, guid: 46d2f7f0ae259b045a31358f26a45e58,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bug
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46d2f7f0ae259b045a31358f26a45e58, type: 3}
 --- !u!1 &1002516784651559854 stripped

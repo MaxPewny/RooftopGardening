@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &12561976 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4688498906722247551, guid: 1b486316e520f5e499fabba1eb11abcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1025607998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &144579611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4306951034384265127, guid: 83c66ae9c3eef71478c7a6b994855fe9,
@@ -412,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: UnlockLevel
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -492,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: SeedPackPresets.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -511,6 +517,18 @@ PrefabInstance:
       propertyPath: SeedPackPresets.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: f6b6e40a856972047b9312d7a8e22dfb,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: ddc29fb05d3f0984fa5dd544040c3433,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4162be1ffee1b734ab64425960e9fc4c,
         type: 2}
     - target: {fileID: 5984884602031043110, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -625,7 +643,7 @@ PrefabInstance:
     - target: {fileID: 5984884602890145172, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5984884603138501826, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -692,6 +710,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7254206105701122962, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SnapAudio
+      value: 
+      objectReference: {fileID: 12561976}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b486316e520f5e499fabba1eb11abcc, type: 3}
 --- !u!1 &1025607999 stripped

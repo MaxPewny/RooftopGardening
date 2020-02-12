@@ -11,6 +11,8 @@ public class Bug : MonoBehaviour, IPointerClickHandler
     public GameObject bugExpelVfx;
     public GameObject snailExpelVfx;
 
+    public AudioSource TapAudio;
+
     private GameObject vfx;
 
     public int RemoveTapAmount = 10;
@@ -45,6 +47,7 @@ public class Bug : MonoBehaviour, IPointerClickHandler
 #if UNITY_ANDROID
         Handheld.Vibrate();
 #endif
+        TapAudio.Play();
         if (removeTapCount <= 0)
         {
             transform.GetComponentInParent<Plant>().BugRemoved();

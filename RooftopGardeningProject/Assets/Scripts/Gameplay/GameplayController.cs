@@ -24,7 +24,7 @@ public class GameplayController : Singleton<GameplayController>
     public string CurrentSceneName;
 
     public float PlayerXp;
-    public Level PlayerLevel = Level.LEVEL_10;
+    public Level PlayerLevel = Level.LEVEL_1;
     public float MaxPlayerXp;
 
 

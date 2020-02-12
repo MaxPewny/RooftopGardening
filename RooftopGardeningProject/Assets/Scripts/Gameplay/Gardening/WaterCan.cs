@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject MovingCanvas;
+    public AudioSource WateringAudio;
+    public AudioSource SnapBackAudio;
+
     private Transform originalParent;
     private RectTransform rectTransform;
     private float timeOfTravel = 5; //time after object reach a target place 
@@ -53,6 +56,7 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
             Debug.Log("Watering Plant");
             HitInfo.transform.gameObject.GetComponent<Plant>().WaterPlant();
             GetComponentInChildren<Animator>().Play("WaterAnim");
+            WateringAudio.Play();
         }
         else
         {
@@ -65,6 +69,7 @@ public class WaterCan : MonoBehaviour, IDragHandler, IEndDragHandler
         transform.SetParent(originalParent);
         rectTransform.offsetMax = Vector2.zero;
         rectTransform.offsetMin = Vector2.zero;
+        SnapBackAudio.Play();
     }
 
     IEnumerator LerpObject(PointerEventData PointerEventData)

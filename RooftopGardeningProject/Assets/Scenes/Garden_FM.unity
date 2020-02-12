@@ -1018,8 +1018,32 @@ PrefabInstance:
     - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: SeedPackPresets.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b30a3dc54144cc4cb4c455800971166,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1982660202a97374187d75c6fb569efc,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cdcb1c4c23bf6746b89961f06c471a7,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 72b45ecdaa95ff943bd60c25c765a77d,
+        type: 2}
     - target: {fileID: 5984884601803350501, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_IsActive

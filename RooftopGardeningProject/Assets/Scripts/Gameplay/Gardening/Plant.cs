@@ -29,6 +29,8 @@ public class Plant : MonoBehaviour, IPointerClickHandler
     public Sprite GrowSignSprite;
     public Sprite FruitSignSprite;
 
+    public AudioSource SowAudio;
+
     public List<GameObject> Fruits = new List<GameObject>();
 
     public float BugApperanceTime = 1; // TODO: move to Scriptable Object?
@@ -119,6 +121,7 @@ public class Plant : MonoBehaviour, IPointerClickHandler
 
         dataSet = true;
         PlantSeedVfx.GetComponentInChildren<ParticleSystem>().Play();
+        SowAudio.Play();
     }
 
     public void Check() 

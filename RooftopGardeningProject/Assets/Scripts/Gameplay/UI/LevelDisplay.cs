@@ -6,6 +6,14 @@ using UnityEngine.UI;
 
 public class LevelDisplay : MonoBehaviour
 {
+
+    public AudioSource OpenMenuAudio;
+
+    private void Awake()
+    {
+        OpenMenuAudio.Play();
+    }
+
     public Text LevelText;
     public Image XpImage;
 

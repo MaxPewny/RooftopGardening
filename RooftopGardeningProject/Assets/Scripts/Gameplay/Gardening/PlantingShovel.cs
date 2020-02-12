@@ -7,6 +7,7 @@ public class PlantingShovel : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject MovingCanvas;
     private Transform originalParent;
+    public AudioSource SnapAudio;
 
     public LayerMask RaycastLayerMask = 1;
 
@@ -34,6 +35,14 @@ public class PlantingShovel : MonoBehaviour, IDragHandler, IEndDragHandler
                 Debug.Log("Planting Seed");
                 hitInfo.transform.gameObject.GetComponent<GardenSlot>().OpenSeedMenu();
             }
+            else
+            {
+                SnapAudio.Play();
+            }
+        }
+        else
+        {
+            SnapAudio.Play();
         }
         transform.SetParent(originalParent);
         transform.gameObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;

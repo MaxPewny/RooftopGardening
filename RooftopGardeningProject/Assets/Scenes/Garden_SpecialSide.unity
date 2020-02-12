@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: UnlockLevel
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -781,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 549513875, guid: 83c66ae9c3eef71478c7a6b994855fe9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.19
+      value: -26.7
       objectReference: {fileID: 0}
     - target: {fileID: 549513875, guid: 83c66ae9c3eef71478c7a6b994855fe9, type: 3}
       propertyPath: m_LocalScale.x
@@ -853,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 3873657393524827063, guid: 83c66ae9c3eef71478c7a6b994855fe9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.99
+      value: -26.74
       objectReference: {fileID: 0}
     - target: {fileID: 3873657393524827063, guid: 83c66ae9c3eef71478c7a6b994855fe9,
         type: 3}

@@ -8,6 +8,9 @@ public class HerbScissors : MonoBehaviour, IDragHandler, IEndDragHandler
     public GameObject MovingCanvas;
     private Transform originalParent;
 
+    public AudioSource CutAudio;
+    public AudioSource SnapBackAudio;
+
     public LayerMask RaycastLayerMask = 1;
 
     void Start()
@@ -33,6 +36,7 @@ public class HerbScissors : MonoBehaviour, IDragHandler, IEndDragHandler
             {
                 hitInfo.transform.gameObject.GetComponent<Plant>().CutHerb();
                 GetComponent<Animator>().SetTrigger("cut");
+                CutAudio.Play();
             }
             else 
             {
@@ -47,8 +51,10 @@ public class HerbScissors : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void SnapScissors() 
     {
+        Debug.Log("cut");
         transform.SetParent(originalParent);
         transform.gameObject.GetComponent<RectTransform>().offsetMax = Vector2.zero;
         transform.gameObject.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+        SnapBackAudio.Play();
     }
 }

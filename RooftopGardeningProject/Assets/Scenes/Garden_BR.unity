@@ -334,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: UnlockLevel
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2229215670958348622, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
@@ -406,6 +406,23 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DebugGrowFruit
       objectReference: {fileID: 0}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cdcb1c4c23bf6746b89961f06c471a7,
+        type: 2}
+    - target: {fileID: 5984884601803350494, guid: 1b486316e520f5e499fabba1eb11abcc,
+        type: 3}
+      propertyPath: SeedPackPresets.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 72b45ecdaa95ff943bd60c25c765a77d,
+        type: 2}
     - target: {fileID: 5984884602031043110, guid: 1b486316e520f5e499fabba1eb11abcc,
         type: 3}
       propertyPath: m_textInfo.characterCount
