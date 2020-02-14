@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Mein s\xFC\xDFer Enkel besucht mich. Der Bub muss was Ordentliches
     essen."
   RewardedXP: 289
-  RewardedXPNeighbor: 2
+  RewardedXPNeighbor: 20
   Objectives:
   - Type: 2
     Count: 4

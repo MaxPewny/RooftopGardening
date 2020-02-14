@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Geschwisterliebe
   Description: Meine Geschwister statten mir einen Besuch ab.Abends wollen wir kochen
   RewardedXP: 452
-  RewardedXPNeighbor: 4
+  RewardedXPNeighbor: 40
   Objectives:
   - Type: 4
     Count: 2

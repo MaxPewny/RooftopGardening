@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Suuuper leckeres Rezept
   Description: Mir wurde ein neues Rezept empfohlen. Ich muss es einfach ausprobieren.
   RewardedXP: 196
-  RewardedXPNeighbor: 1
+  RewardedXPNeighbor: 10
   Objectives:
   - Type: 2
     Count: 6

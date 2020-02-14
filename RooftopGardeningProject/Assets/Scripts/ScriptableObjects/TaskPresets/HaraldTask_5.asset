@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Meine Bagage und ich treffe uns zum Skate. Dachte wir knabbern etwas
     Gem\xFCse mit."
   RewardedXP: 269
-  RewardedXPNeighbor: 3
+  RewardedXPNeighbor: 30
   Objectives:
   - Type: 5
     Count: 2

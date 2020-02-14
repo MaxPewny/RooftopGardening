@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Auf den Geschmack gekommen
   Description: 'Du...der Salat von letztens war echt lecker. '
   RewardedXP: 311
-  RewardedXPNeighbor: 3
+  RewardedXPNeighbor: 30
   Objectives:
   - Type: 0
     Count: 4

@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Morgen ist unser Nachabrschaftsfest. Lass uns etwas von deinem Gem\xFCse
     da pr\xE4sentieren"
   RewardedXP: 298
-  RewardedXPNeighbor: 2
+  RewardedXPNeighbor: 20
   Objectives:
   - Type: 2
     Count: 5

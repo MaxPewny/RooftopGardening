@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "Gesunde Ern\xE4hrung"
   Description: "Mein Arzt hat gemeint ich muss mich ges\xFCnder ern\xE4hren. "
   RewardedXP: 344
-  RewardedXPNeighbor: 4
+  RewardedXPNeighbor: 40
   Objectives:
   - Type: 1
     Count: 2

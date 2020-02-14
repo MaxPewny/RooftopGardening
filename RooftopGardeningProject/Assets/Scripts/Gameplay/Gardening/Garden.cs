@@ -40,7 +40,7 @@ public class Garden : MonoBehaviour
         foreach (Weed weed in GetComponentsInChildren<Weed>())
         {
             Weeds.Add(weed.gameObject);
-            weed.gameObject.SetActive(false);
+            //weed.gameObject.SetActive(false);
         }
         GameplayController.Instance.GardenDatas[GardenNumber].MaxWeedCounter = Weeds.Count;
         Check();

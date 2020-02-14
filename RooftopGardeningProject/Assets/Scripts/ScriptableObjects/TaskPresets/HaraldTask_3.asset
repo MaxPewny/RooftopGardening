@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "F\xFCr Gudrun"
   Description: "Ich m\xF6chte meine Gudrun \xFCberraschen. Dachte ich koch was Gutes."
   RewardedXP: 357
-  RewardedXPNeighbor: 5
+  RewardedXPNeighbor: 50
   Objectives:
   - Type: 6
     Count: 2

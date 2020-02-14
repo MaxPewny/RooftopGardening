@@ -106,7 +106,7 @@ public class GameplayController : Singleton<GameplayController>
             DateTime temporaryDate = new DateTime();
             temporaryDate = DateTime.Parse(UsedData.NextGrowthDate);
             temporaryDate += DateTime.Now - DateTime.Parse(UsedData.NextWaterDate);
-            UsedData.NextGrowthDate = temporaryDate.ToString();
+            //UsedData.NextGrowthDate = temporaryDate.ToString();
         }
         if (DateTime.Now >= DateTime.Parse(UsedData.NextBugDate))
         {
@@ -125,11 +125,11 @@ public class GameplayController : Singleton<GameplayController>
             {
                 UsedData.NextWaterDate = DateTime.Now.ToString();
                 UsedData.NextGrowthDate = DateTime.Now.AddHours(UsedData.GrowCycleTime).ToString();
-                Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen wachsen, sieh sie dir an");
+                //Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen wachsen, sieh sie dir an");
                 UsedData.PlantLevel++;
                 if (UsedData.PlantLevel > UsedData.MaxPlantLevel) 
                 {
-                    Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen tragen Früchte, sieh sie dir an");
+                    //Notification.Instance.SendAndroidNotification(DateTime.Now.AddHours(UsedData.GrowCycleTime), "Rooftop Garden", "Hey dein Pflanzen tragen Früchte, sieh sie dir an");
                 }
             }
             else

@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Von Nachbar zu Nachbar
   Description: "Harald hat mir von deinem k\xF6stlichen Gem\xFCse erz\xE4hlt."
   RewardedXP: 363
-  RewardedXPNeighbor: 2
+  RewardedXPNeighbor: 20
   Objectives:
   - Type: 1
     Count: 1

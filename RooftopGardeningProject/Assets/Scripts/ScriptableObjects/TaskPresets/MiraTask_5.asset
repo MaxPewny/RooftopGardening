@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "Gr\xFCne Erkenntnis"
   Description: "Ich will ich meine Ern\xE4hrung umstellen. Hilfst du mir dabei"
   RewardedXP: 347
-  RewardedXPNeighbor: 2
+  RewardedXPNeighbor: 20
   Objectives:
   - Type: 3
     Count: 2
